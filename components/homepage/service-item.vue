@@ -1,11 +1,11 @@
 <template>
-  <div class="service-item">
-    <div class="service-item__icon">
+  <div class="service-item py-1 mb-2 flex flex--align-middle">
+    <div class="service-item__icon p-1 mr-1">
       <fa-icon :icon="faIcon"/>
     </div>
 
     <div class="service-item__content">
-      <h3 class="service-item__name">
+      <h3 class="service-item__name mt-0">
         <nuxt-link v-if="url" :to="url" class="link link--plain">{{ name }}</nuxt-link>
         <a v-else href="javascript:void(0);" class="link link--plain">{{ name }}</a>
       </h3>
@@ -30,13 +30,6 @@
   @import "~assets/sass/variables/colors";
 
   .service-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-
     &__icon {
       background: $primary;
       -webkit-border-radius: 50%;
@@ -45,15 +38,12 @@
       color: white;
       display: block;
       font-size: 1rem;
-      margin-right: 1rem;
-      padding: 1rem;
       width: 50px;
       height: 50px;
       line-height: 1;
     }
 
     &__name {
-      margin-top: 0;
       margin-bottom: 0.5rem;
       > .link {
         text-transform: capitalize;

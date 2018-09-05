@@ -18,3 +18,20 @@
     }
   }
 }
+
+.flex {
+  display: flex !important;
+  &--column {
+    flex-direction: column;
+  }
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+  &--align-middle {
+    align-items: center;
+  }
+  &--justify-center {
+    justify-content: center;
+  }
+}

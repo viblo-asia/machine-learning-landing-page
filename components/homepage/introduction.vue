@@ -1,5 +1,5 @@
 <template>
-  <el-row class="introduction" id="gioi-thieu">
+  <el-row class="introduction py-4" id="gioi-thieu">
     <el-col>
       <SectionHeader>
         <template slot="title">
@@ -19,9 +19,9 @@
           chúng tôi sẽ tách các dịch vụ này thành các ứng dụng độc lập và bạn hoàn toàn có thể
           sử dụng chúng để xây dựng những ý tưởng của riêng mình.
         </p>
-        <!--<p>-->
-          <!--<a href="#our-services" class="introduction__more link">Tìm hiểu thêm...</a>-->
-        <!--</p>-->
+        <p>
+          <a href="#dich-vu" class="introduction__more link">Tìm hiểu thêm...</a>
+        </p>
       </div>
     </el-col>
   </el-row>
@@ -41,9 +41,6 @@
   @import "~assets/sass/variables/colors";
 
   .introduction {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-
     .icon-heart {
       color: #ff0000;
       font-size: 2.4rem;

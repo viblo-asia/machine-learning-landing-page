@@ -1,6 +1,6 @@
 <template>
-  <nav class="navigation">
-    <ul class="navigation__menu">
+  <nav class="navigation flex flex--align-middle">
+    <ul class="navigation__menu flex">
       <li
         v-for="(item, index) in menuItems"
         :key="index"
@@ -30,13 +30,9 @@
 
 <style lang="scss">
   .navigation {
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
 
     &__menu {
-      display: flex;
-      flex-direction: row;
       list-style: none;
     }
 

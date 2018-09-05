@@ -1,8 +1,8 @@
 <template>
-  <footer class="footer">
+  <footer class="footer my-3">
     <el-row type="flex" justify="center" align="middle">
       <el-col :md="3">
-        <ul class="footer__links">
+        <ul class="footer__links flex">
           <li class="footer__link footer__link--fb">
             <a :href="facebookPageURL" target="_blank" :title="facebookPageTitle">
               <img :src="facebookIcon" :alt="facebookPageTitle">
@@ -47,12 +47,7 @@
   }
 
   .footer {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
     &__links {
-      display: flex;
-      flex-direction: row;
       list-style-type: none;
     }
 

@@ -2,7 +2,7 @@
   <div :class="{ 'section-header': true, 'section-header--uppercase': uppercase }">
     <div class="section-header__title">
       <slot name="title">
-        <h4>{{ title }}</h4>
+        <h4 class="my-1">{{ title }}</h4>
       </slot>
     </div>
 
@@ -42,10 +42,6 @@
       font-size: 1.875rem;
       font-weight: 700;
       text-transform: capitalize;
-      h4 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
     }
 
     &--uppercase &__title {

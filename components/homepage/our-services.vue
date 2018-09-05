@@ -1,10 +1,10 @@
 <template>
-  <section class="our-services" id="dich-vu">
+  <section class="our-services py-4" id="dich-vu">
     <SectionHeader title="Our services" :uppercase="true">
       Các dịch vụ chúng tôi đã và đang phát triển.
     </SectionHeader>
 
-    <el-row :gutter="20" class="our-services__list">
+    <el-row :gutter="20" class="mt-3">
       <el-col v-for="(service, index) in services" :key="index" :md="8">
         <ServiceItem v-bind="service"/>
       </el-col>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import services from '~/data/service-items'
+  import services from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
   import ServiceItem from './service-item.vue'
 
@@ -28,14 +28,3 @@
     })
   }
 </script>
-
-<style lang="css">
-  .our-services {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .our-services .our-services__list {
-    margin-top: 3rem;
-  }
-</style>
