@@ -1,5 +1,5 @@
 <template>
-  <section class="our-services">
+  <section class="our-services" id="dich-vu">
     <SectionHeader title="Our services" :uppercase="true">
       Các dịch vụ chúng tôi đã và đang phát triển.
     </SectionHeader>

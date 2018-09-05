@@ -1,5 +1,5 @@
 <template>
-  <el-row class="introduction">
+  <el-row class="introduction" id="gioi-thieu">
     <el-col>
       <SectionHeader>
         <template slot="title">
