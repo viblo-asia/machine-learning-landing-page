@@ -1,9 +1,18 @@
 <template>
   <section class="viblo-container">
-    <el-row type="flex" align="middle" justify="center">
-      <el-col :md="3">
-        <h1>Hello world!</h1>
-      </el-col>
-    </el-row>
+    <Introduction/>
+    <OurServices/>
   </section>
 </template>
+
+<script>
+  import Introduction from '~/components/homepage/introduction.vue'
+  import OurServices from '~/components/homepage/our-services.vue'
+
+  export default {
+    components: {
+      Introduction,
+      OurServices
+    }
+  }
+</script>

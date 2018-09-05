@@ -14,12 +14,13 @@ module.exports = {
   loading: { color: '#3B8070' },
 
   css: [
-    'element-ui/lib/theme-chalk/index.css',
-    'assets/sass/app.scss',
+    '~/assets/sass/libs/element-ui.scss',
+    '~/assets/sass/app.scss',
   ],
 
   plugins: [
-    '@/plugins/element-ui',
+    '~/plugins/element-ui',
+    '~/plugins/font-awesome',
   ],
 
   build: {
