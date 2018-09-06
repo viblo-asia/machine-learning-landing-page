@@ -7,7 +7,7 @@
 
     <div class="mt-4">
       <how-work-item
-        v-for="(service, index) in howWorkItems"
+        v-for="(service, index) in services"
         :key="index"
         :title="service.name"
         :image="service.image"
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import howWorkItems from '~/contents/how-work-items'
+  import services from '~/contents/service-items-detail'
   import SectionHeader from '~/components/shared/section-header.vue'
   import HowWorkItem from '~/components/homepage/how-work-item.vue'
 
@@ -35,7 +35,7 @@
     },
 
     data: () => ({
-      howWorkItems
+      services
     })
   }
 </script>

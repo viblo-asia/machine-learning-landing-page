@@ -8,26 +8,26 @@ export default [
   {
     name: 'Spam detect in post',
     description: 'Nhận diện bài viết thuộc dạng spam',
-    faIcon: 'tags',
+    faIcon: 'clone',
     url: '/spam-detect'
   },
   {
     name: 'Tag compare',
     description: 'Tìm kiếm tag tương tự về cả từ ngữ lẫn ngữ nghĩa',
-    faIcon: 'language',
+    faIcon: 'clone',
     url: '/tag-compare'
   },
   {
-    name: 'Tag duplicates detection',
-    description: 'Tìm kiếm các thẻ tag trùng lặp',
-    faIcon: 'file-alt',
-    url: '/tag-duplicates-detection'
+    name: 'Auto tagging',
+    description: 'Tự động đánh tag cho văn bản',
+    faIcon: 'tags',
+    url: '/auto-tagging'
   },
   {
-    name: 'Copy / Paste checker',
-    description: 'Kiểm tra sự trùng lặp giữa các văn bản',
-    faIcon: 'clone',
-    url: '/copy-paste-checker'
+    name: 'Language detection',
+    description: 'Xác định ngôn ngữ chính của bài viết',
+    faIcon: 'language',
+    url: '/language-detection'
   },
   {
     name: 'More services later...',

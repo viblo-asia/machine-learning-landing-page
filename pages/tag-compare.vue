@@ -36,7 +36,7 @@
 </template>
 
 <script>
-  import { detectSpam } from '~/api'
+  import { tagCompare } from '~/api'
   import SectionHeader from '~/components/shared/section-header.vue'
   import TagsList from '~/components/shared/tags-list.vue'
 
@@ -57,7 +57,7 @@
     methods: {
       onSubmit() {
         this.processing = true
-        return detectSpam(this.form)
+        return tagCompare(this.form)
           .then(({ data, message }) => {
             this.$message.success(message)
             this.result = data.data
