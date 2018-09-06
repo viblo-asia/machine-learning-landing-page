@@ -1,6 +1,8 @@
 <template>
   <div :class="{ 'section-header': true, 'section-header--uppercase': uppercase }">
-    <div class="section-header__title">
+    <div
+      class="section-header__title"
+      :class="{ [`section-header__title--${type}`]: !!type, [`section-header__title--${size}`]: !!size }">
       <slot name="title">
         <h4 class="my-1">{{ title }}</h4>
       </slot>
@@ -21,7 +23,9 @@
     props: {
       title: String,
       description: String,
-      uppercase: Boolean
+      uppercase: Boolean,
+      size: String,
+      type: String,
     }
   }
 </script>
@@ -42,6 +46,13 @@
       font-size: 1.875rem;
       font-weight: 700;
       text-transform: capitalize;
+      &--small {
+        font-size: 1.4rem;
+      }
+      &--info {
+        color: #333333;
+        text-transform: initial;
+      }
     }
 
     &--uppercase &__title {

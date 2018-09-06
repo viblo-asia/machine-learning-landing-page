@@ -17,6 +17,9 @@ import Form from 'element-ui/lib/form'
 import FormItem from 'element-ui/lib/form-item'
 import Input from 'element-ui/lib/input'
 
+import Table from 'element-ui/lib/table'
+import TableColumn from 'element-ui/lib/table-column'
+
 import Message from 'element-ui/lib/message'
 import Alert from 'element-ui/lib/alert'
 
@@ -36,6 +39,9 @@ export default () => {
   Vue.component('el-form', Form)
   Vue.component('el-form-item', FormItem)
   Vue.component('el-input', Input)
+
+  Vue.component('el-table', Table)
+  Vue.component('el-table-column', TableColumn)
 
   Vue.component('el-alert', Alert)
   Vue.prototype.$message = Message

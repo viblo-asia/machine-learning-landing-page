@@ -12,10 +12,10 @@ export default [
     url: '/spam-detect'
   },
   {
-    name: 'Language detection',
-    description: 'Xác định ngôn ngữ chính của văn bản',
+    name: 'Tag compare',
+    description: 'Tìm kiếm tag tương tự về cả từ ngữ lẫn ngữ nghĩa',
     faIcon: 'language',
-    url: '/language-detection'
+    url: '/tag-compare'
   },
   {
     name: 'Tag duplicates detection',
