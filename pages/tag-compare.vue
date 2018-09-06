@@ -68,9 +68,3 @@
     }
   }
 </script>
-
-<style lang="css">
-  .result strong {
-    text-transform: uppercase;
-  }
-</style>
