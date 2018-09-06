@@ -5,7 +5,7 @@
     <el-row class="my-2">
       <el-col>
         <el-form :model="form">
-          <el-form-item label="Enter your code">
+          <el-form-item label="Nhập source code của bạn cần kiểm tra">
             <el-input
               v-model="form.code"
               :autosize="{ minRows: 6 }"
@@ -29,7 +29,7 @@
     <el-row v-if="result" type="flex" justify="center">
       <el-col :span="12">
         <el-alert :closable="false" type="info" title="">
-          <span class="mr-1">Programming language detected:</span>
+          <span class="mr-1">Ngôn ngữ lập trình:</span>
           <strong>{{ result }}</strong>
         </el-alert>
       </el-col>

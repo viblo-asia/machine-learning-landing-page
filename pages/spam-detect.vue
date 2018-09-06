@@ -5,7 +5,7 @@
     <el-row class="my-2">
       <el-col>
         <el-form :model="form">
-          <el-form-item label="Enter your contents">
+          <el-form-item label="Nhập nội dung bài viết cần kiểm tra spam">
             <el-input
               v-model="form.document"
               :autosize="{ minRows: 6 }"
