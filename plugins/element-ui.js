@@ -13,6 +13,12 @@ import Col from 'element-ui/lib/col'
 
 // Form components:
 import Button from 'element-ui/lib/button'
+import Form from 'element-ui/lib/form'
+import FormItem from 'element-ui/lib/form-item'
+import Input from 'element-ui/lib/input'
+
+import Message from 'element-ui/lib/message'
+import Alert from 'element-ui/lib/alert'
 
 export default () => {
   locale.use(english)
@@ -27,4 +33,10 @@ export default () => {
 
   // Form components:
   Vue.component('el-button', Button)
+  Vue.component('el-form', Form)
+  Vue.component('el-form-item', FormItem)
+  Vue.component('el-input', Input)
+
+  Vue.component('el-alert', Alert)
+  Vue.prototype.$message = Message
 }

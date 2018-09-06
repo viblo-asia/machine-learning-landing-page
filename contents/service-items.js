@@ -1,9 +1,9 @@
 export default [
   {
-    name: 'Post summarization',
-    description: 'Tóm tắt nội dung chính của các bài viết',
+    name: 'Programming language detect',
+    description: 'Xác định ngôn ngữ lập trình',
     faIcon: 'list-alt',
-    url: '/post-summarization'
+    url: '/programming-language-detect'
   },
   {
     name: 'Post auto-tagging',

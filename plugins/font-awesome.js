@@ -6,7 +6,8 @@ import {
   faTags,
   faLanguage,
   faFileAlt,
-  faClone
+  faClone,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons'
 
 export default () => {
@@ -16,6 +17,7 @@ export default () => {
     faLanguage,
     faFileAlt,
     faClone,
+    faExternalLinkAlt
   ])
 
   Vue.component('fa-icon', FontAwesomeIcon)

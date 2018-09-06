@@ -11,7 +11,7 @@ module.exports = {
     ]
   },
 
-  loading: { color: '#3B8070' },
+  loading: { color: '#5488c7' },
 
   css: [
     '~/assets/sass/libs/element-ui.scss',
