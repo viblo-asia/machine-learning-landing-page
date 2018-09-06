@@ -1,13 +1,13 @@
 <template>
   <div class="viblo-container">
-    <SectionHeader :uppercase="true" title="Programming language detect"/>
+    <SectionHeader :uppercase="true" title="Spam detect in post"/>
 
     <el-row class="my-2">
       <el-col>
         <el-form :model="form">
-          <el-form-item label="Enter your code">
+          <el-form-item label="Enter your contents">
             <el-input
-              v-model="form.code"
+              v-model="form.document"
               :autosize="{ minRows: 6 }"
               type="textarea"
               @input="result = null"/>
@@ -15,7 +15,7 @@
 
           <el-form-item class="flex flex--center">
             <el-button
-              :disabled="!form.code"
+              :disabled="!form.document"
               :loading="processing"
               type="primary"
               @click="onSubmit">
@@ -28,9 +28,9 @@
 
     <el-row v-if="result" type="flex" justify="center">
       <el-col :span="12">
-        <el-alert :closable="false" type="info" title="">
-          <span class="mr-1">Programming language detected:</span>
-          <strong>{{ result }}</strong>
+        <el-alert :closable="false" type="info" title="" class="result">
+          <span v-if="isSpam">It is a <strong>spam</strong>. Your document type of {{ result }}.</span>
+          <span v-else>Your document type of {{ result }}. It is <strong>not</strong> a spam.</span>
         </el-alert>
       </el-col>
     </el-row>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-  import { detectCode } from '~/api'
+  import { detectSpam } from '~/api'
   import SectionHeader from '~/components/shared/section-header.vue'
 
   export default {
@@ -50,17 +50,23 @@
       processing: false,
       result: null,
       form: {
-        code: '',
+        document: '',
       }
     }),
+
+    computed: {
+      isSpam() {
+        return this.result === 'Non-IT'
+      }
+    },
 
     methods: {
       onSubmit() {
         this.processing = true
-        return detectCode(this.form)
+        return detectSpam(this.form)
           .then(({ data, message }) => {
             this.$message.success(message)
-            this.result = data.data.programming_language
+            this.result = data.data.document_type
           })
           .catch(_ => this.$message.error('Something went wrong.'))
           .finally(() => this.processing = false)
@@ -68,3 +74,9 @@
     }
   }
 </script>
+
+<style lang="css">
+  .result strong {
+    text-transform: uppercase;
+  }
+</style>

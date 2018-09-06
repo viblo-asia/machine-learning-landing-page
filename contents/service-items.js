@@ -6,10 +6,10 @@ export default [
     url: '/programming-language-detect'
   },
   {
-    name: 'Post auto-tagging',
-    description: 'Tự động gắn các thẻ tag cho bài viết',
+    name: 'Spam detect in post',
+    description: 'Nhận diện bài viết thuộc dạng spam',
     faIcon: 'tags',
-    url: '/post-auto-tagging'
+    url: '/spam-detect'
   },
   {
     name: 'Language detection',
