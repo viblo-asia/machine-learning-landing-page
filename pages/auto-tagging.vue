@@ -1,17 +1,27 @@
 <template>
   <div class="viblo-container">
-    <section-header :uppercase="true" title="Tag compare"/>
+    <section-header :uppercase="true" title="Auto tagging">
+      Tự động gợi ý tag cho bài viết dựa trên nội dung bài
+    </section-header>
 
     <el-row class="my-2" type="flex" justify="center">
-      <el-col :md="12">
+      <el-col>
         <el-form :model="form" method="post" @submit.native.prevent="onSubmit">
-          <el-form-item label="Nhập tên tag mà bạn muốn so sánh để tìm ra những tag tương tự">
-            <el-input v-model="form.tag" @input="result = null"/>
+          <el-form-item label="Nhập nội dung bài viết của bạn">
+            <el-input
+              v-model="form.document"
+              :autosize="{ minRows: 6 }"
+              type="textarea"
+              @input="result = null"/>
+          </el-form-item>
+
+          <el-form-item label="Nội dung viết theo cú pháp markdown">
+            <el-switch v-model="form.is_markdown"/>
           </el-form-item>
 
           <el-form-item class="flex flex--center">
             <el-button
-              :disabled="!form.tag"
+              :disabled="!form.document"
               :loading="processing"
               type="primary"
               @click="onSubmit">
@@ -22,42 +32,42 @@
       </el-col>
     </el-row>
 
-    <el-row v-if="result" :gutter="30" type="flex" justify="center">
-      <el-col :span="12">
-        <section-header title="Tags cùng tên" size="small" type="info"/>
-        <tags-list :tags="result.tags_same_words" class="mt-2"/>
-      </el-col>
-      <el-col :span="12">
-        <section-header title="Tags đồng nghĩa" size="small" type="info"/>
-        <tags-list :tags="result.tags_same_meaning" class="mt-2"/>
+    <el-row v-if="result" type="flex" justify="center">
+      <el-col :md="12">
+        <section-header title="Danh sách gợi ý" size="small" type="info"/>
+        <tags-list :tags="result.tags_recommend" class="mt-2"/>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-  import { tagCompare } from '~/api'
+  import { autoTagging } from '~/api'
   import SectionHeader from '~/components/shared/section-header.vue'
   import TagsList from '~/components/shared/tags-list.vue'
+  import ElSwitch from 'element-ui/lib/switch'
+  import 'element-ui/lib/theme-chalk/switch.css'
 
   export default {
     components: {
       SectionHeader,
-      TagsList
+      TagsList,
+      ElSwitch
     },
 
     data: () => ({
       processing: false,
       result: null,
       form: {
-        tag: '',
+        document: '',
+        is_markdown: true,
       }
     }),
 
     methods: {
       onSubmit() {
         this.processing = true
-        return tagCompare(this.form)
+        return autoTagging(this.form)
           .then(({ data, message }) => {
             this.$message.success(message)
             this.result = data.data
