@@ -1,6 +1,8 @@
 <template>
   <div class="viblo-container">
-    <section-header :uppercase="true" title="Spam detect in post"/>
+    <section-header :uppercase="true" :title="service.name">
+      {{ service.description }}
+    </section-header>
 
     <el-row class="my-2">
       <el-col>
@@ -39,6 +41,7 @@
 
 <script>
   import { detectSpam } from '~/api'
+  import { spamDetection as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
 
   export default {
@@ -47,6 +50,7 @@
     },
 
     data: () => ({
+      service,
       processing: false,
       result: null,
       form: {

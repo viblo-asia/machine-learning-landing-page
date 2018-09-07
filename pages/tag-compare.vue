@@ -1,6 +1,8 @@
 <template>
   <div class="viblo-container">
-    <section-header :uppercase="true" title="Tag compare"/>
+    <section-header :uppercase="true" :title="service.name">
+      {{ service.description }}
+    </section-header>
 
     <el-row class="my-2" type="flex" justify="center">
       <el-col :md="12">
@@ -37,6 +39,7 @@
 
 <script>
   import { tagCompare } from '~/api'
+  import { tagCompare as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
   import TagsList from '~/components/shared/tags-list.vue'
 
@@ -47,6 +50,7 @@
     },
 
     data: () => ({
+      service,
       processing: false,
       result: null,
       form: {

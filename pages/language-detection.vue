@@ -1,7 +1,7 @@
 <template>
   <div class="viblo-container">
-    <section-header :uppercase="true" title="Language detection">
-      Tự động phát hiện ngôn ngữ chính của văn bản
+    <section-header :uppercase="true" :title="service.name">
+      {{ service.description }}
     </section-header>
 
     <el-row class="my-2" type="flex" justify="center">
@@ -48,6 +48,7 @@
 
 <script>
   import { detectLanguage } from '~/api'
+  import { languageDetection as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
   import ElSwitch from 'element-ui/lib/switch'
   import 'element-ui/lib/theme-chalk/switch.css'
@@ -66,6 +67,7 @@
     },
 
     data: () => ({
+      service,
       processing: false,
       result: null,
       form: {

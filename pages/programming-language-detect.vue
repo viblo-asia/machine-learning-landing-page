@@ -1,6 +1,8 @@
 <template>
   <div class="viblo-container">
-    <section-header :uppercase="true" title="Programming language detect"/>
+    <section-header :uppercase="true" :title="service.name">
+      {{ service.description }}
+    </section-header>
 
     <el-row class="my-2">
       <el-col>
@@ -39,6 +41,7 @@
 
 <script>
   import { detectCode } from '~/api'
+  import { langCodeDetection as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
 
   export default {
@@ -47,6 +50,7 @@
     },
 
     data: () => ({
+      service,
       processing: false,
       result: null,
       form: {

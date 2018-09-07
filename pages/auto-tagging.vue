@@ -1,7 +1,7 @@
 <template>
   <div class="viblo-container">
-    <section-header :uppercase="true" title="Auto tagging">
-      Tự động gợi ý tag cho bài viết dựa trên nội dung bài
+    <section-header :uppercase="true" :title="service.name">
+      {{ service.description }}
     </section-header>
 
     <el-row class="my-2" type="flex" justify="center">
@@ -43,6 +43,7 @@
 
 <script>
   import { autoTagging } from '~/api'
+  import { autoTagging as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
   import TagsList from '~/components/shared/tags-list.vue'
   import ElSwitch from 'element-ui/lib/switch'
@@ -56,6 +57,7 @@
     },
 
     data: () => ({
+      service,
       processing: false,
       result: null,
       form: {
