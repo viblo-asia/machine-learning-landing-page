@@ -48,6 +48,7 @@
 
 <script>
   import { detectLanguage } from '~/api'
+  import { convertFromObject } from '~/utils/form-data'
   import { languageDetection as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
   import ElSwitch from 'element-ui/lib/switch'
@@ -79,7 +80,9 @@
     methods: {
       onSubmit() {
         this.processing = true
-        return detectLanguage(this.form)
+        const formData = convertFromObject(this.form)
+
+        return detectLanguage(formData)
           .then(({ data, message }) => {
             this.$message.success(message)
             const languages = normalizeResult(data.data.result)
