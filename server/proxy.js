@@ -5,8 +5,8 @@ require('dotenv').config({
   path: resolve(__dirname, '../.env'),
 })
 
-const proxyTarget = process.env.MACHINE_LEARNING_PROXY_TARGET + '/api'
-const apiKey = process.env.MACHINE_LEARNING_API_KEY
+const proxyTarget = process.env.API_HOST + '/api'
+const apiKey = process.env.API_KEY
 
 module.exports = function () {
   return proxy('/_/', {
