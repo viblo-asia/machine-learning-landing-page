@@ -3,9 +3,9 @@
     <el-row type="flex">
       <el-col :md="12" class="flex">
         <div class="how-work-item__main p-3">
-          <SectionHeader :title="title" :uppercase="true">
+          <section-header :title="title" :uppercase="true">
             <slot name="description"/>
-          </SectionHeader>
+          </section-header>
 
           <div class="mt-2">
             <slot/>

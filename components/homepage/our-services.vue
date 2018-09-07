@@ -1,16 +1,16 @@
 <template>
   <section class="our-services py-4" id="dich-vu">
-    <SectionHeader title="Our services" :uppercase="true">
+    <section-header title="Our services" :uppercase="true">
       Các dịch vụ chúng tôi đã và đang phát triển.
-    </SectionHeader>
+    </section-header>
 
     <el-row :gutter="20" class="mt-3">
       <el-col v-for="(service, index) in services" :key="index" :md="8">
-        <ServiceItem v-bind="service"/>
+        <service-item v-bind="service"/>
       </el-col>
 
       <el-col :md="8">
-        <ServiceItem
+        <service-item
           name="More services later..."
           description="Ghé thăm thường xuyên để trải nghiệm những dịch vụ mới"
           faIcon="clone"/>

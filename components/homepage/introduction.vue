@@ -1,13 +1,11 @@
 <template>
   <el-row class="introduction py-4" id="gioi-thieu">
     <el-col>
-      <SectionHeader>
+      <section-header>
         <template slot="title">
-          <h4>
-            Viblo <span class="icon-heart">&hearts;</span> Machine learning
-          </h4>
+          <h4>Viblo <span class="icon-heart">&hearts;</span> Machine learning</h4>
         </template>
-      </SectionHeader>
+      </section-header>
 
       <div class="introduction__text">
         <p>

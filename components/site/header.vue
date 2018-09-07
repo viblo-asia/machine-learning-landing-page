@@ -2,11 +2,11 @@
   <div class="header">
     <el-row :gutter="10" type="flex" justify="space-between" align="middle">
       <el-col>
-        <LogoWrap/>
+        <logo-wrap/>
       </el-col>
 
       <el-col>
-        <Navigation/>
+        <navigation/>
       </el-col>
     </el-row>
   </div>

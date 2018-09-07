@@ -1,6 +1,6 @@
 <template>
   <div class="viblo-container">
-    <SectionHeader :uppercase="true" title="Programming language detect"/>
+    <section-header :uppercase="true" title="Programming language detect"/>
 
     <el-row class="my-2">
       <el-col>

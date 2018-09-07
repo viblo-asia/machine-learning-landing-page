@@ -1,11 +1,11 @@
 <template>
   <div>
     <section class="viblo-container">
-      <Introduction/>
-      <OurServices/>
+      <introduction/>
+      <our-services/>
     </section>
 
-    <HowWork/>
+    <how-work/>
   </div>
 </template>
 

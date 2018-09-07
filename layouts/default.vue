@@ -2,7 +2,7 @@
   <el-container class="viblo-app">
     <el-header height="auto">
       <div class="viblo-container">
-        <Header/>
+        <app-header/>
       </div>
     </el-header>
 
@@ -12,20 +12,20 @@
 
     <el-footer height="auto" class="footer-bg">
       <div class="viblo-container">
-        <Footer/>
+        <app-footer/>
       </div>
     </el-footer>
   </el-container>
 </template>
 
 <script>
-  import Header from '~/components/site/header.vue'
-  import Footer from '~/components/site/footer.vue'
+  import AppHeader from '~/components/site/header.vue'
+  import AppFooter from '~/components/site/footer.vue'
 
   export default {
     components: {
-      Header,
-      Footer
+      AppHeader,
+      AppFooter
     }
   }
 </script>

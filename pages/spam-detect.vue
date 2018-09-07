@@ -1,6 +1,6 @@
 <template>
   <div class="viblo-container">
-    <SectionHeader :uppercase="true" title="Spam detect in post"/>
+    <section-header :uppercase="true" title="Spam detect in post"/>
 
     <el-row class="my-2">
       <el-col>

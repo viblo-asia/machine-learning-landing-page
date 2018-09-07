@@ -35,6 +35,7 @@
     <el-row v-if="result" type="flex" justify="center">
       <el-col :md="12">
         <section-header title="Kết quả" size="small" type="info"/>
+
         <el-table :data="result.languages" class="mt-2">
           <el-table-column prop="name" label="Ngôn ngữ"/>
           <el-table-column prop="langCode" label="Lang code"/>
