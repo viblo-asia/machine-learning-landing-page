@@ -20,7 +20,7 @@
     <el-row>
       <el-col>
         <p class="footer__copyright">
-          &copy; 2017 Viblo. All rights reserved.
+          &copy; 2018 Viblo. All rights reserved.
         </p>
       </el-col>
     </el-row>

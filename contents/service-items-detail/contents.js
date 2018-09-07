@@ -7,7 +7,7 @@ export const spamDetect = `<p>
   Hệ thống trí tuệ nhân tạo được training trên gần <strong>15,000 bài viết</strong>
   về công nghệ hiện có trên Viblo cũng như các bài báo, quảng cáo khác
   giúp xác định được đâu là bài đăng có nội dung không liên quan tới lĩnh vực công nghệ
-  với độ chính xác rất cao <strong>(99,7%)</strong> trong khoảng thời gian không để kể (ms).
+  với độ chính xác rất cao <strong>(99,7%)</strong> trong khoảng thời gian không đáng kể (ms).
 </p>`
 
 export const languageDetect = `<p>
