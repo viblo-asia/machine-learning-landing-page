@@ -15,7 +15,7 @@ export const spamDetection = {
 export const tagCompare = {
   name: 'Tag compare',
   description: 'Tìm tag tương tự về cả từ lẫn ngữ nghĩa',
-  faIcon: 'clone',
+  faIcon: 'tags',
   url: '/tag-compare'
 }
 

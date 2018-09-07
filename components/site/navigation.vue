@@ -5,12 +5,12 @@
         v-for="(item, index) in menuItems"
         :key="index"
         class="navigation__item">
-        <nuxt-link
-          :to="item.url"
+        <a
+          :href="item.url"
           :title="item.name"
           class="navigation__link no-underline">
           {{ item.name }}
-        </nuxt-link>
+        </a>
       </li>
     </ul>
   </nav>
