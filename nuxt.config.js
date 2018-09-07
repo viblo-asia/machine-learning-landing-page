@@ -1,4 +1,6 @@
 module.exports = {
+  dev: process.env.NODE_ENV !== 'production',
+
   head: {
     title: 'Viblo Machine Learning Services',
     meta: [
