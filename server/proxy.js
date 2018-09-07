@@ -22,10 +22,6 @@ module.exports = function () {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'api-key': apiKey
-    },
-
-    onProxyReq(proxyReq, req) {
-      console.log()
     }
   })
 }
