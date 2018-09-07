@@ -1,11 +1,11 @@
 <template>
-  <section class="how-work py-4" id="tong-quan">
+  <section class="how-work py-sm-and-up-4 py-xs-only-2" id="tong-quan">
     <section-header :uppercase="true" title="How our services work?">
       Bạn tò mò về cách thức hoạt động của dịch vụ trên?
       Dưới đây là ý tưởng chung của các dịch vụ đó!
     </section-header>
 
-    <div class="mt-4">
+    <div class="mt-sm-and-up-4 mt-xs-only-1">
       <how-work-item
         v-for="(service, index) in services"
         :key="index"

@@ -1,8 +1,8 @@
 <template>
   <footer class="footer my-3">
-    <el-row type="flex" justify="center" align="middle">
-      <el-col :md="3">
-        <ul class="footer__links flex">
+    <el-row>
+      <el-col class="flex flex--center">
+        <ul class="footer__links flex pl-0">
           <li class="footer__link footer__link--fb">
             <a :href="facebookPageURL" target="_blank" :title="facebookPageTitle">
               <img :src="facebookIcon" :alt="facebookPageTitle">
@@ -17,8 +17,8 @@
       </el-col>
     </el-row>
 
-    <el-row type="flex" justify="center" align="middle">
-      <el-col :md="6">
+    <el-row>
+      <el-col>
         <p class="footer__copyright">
           &copy; 2017 Viblo. All rights reserved.
         </p>

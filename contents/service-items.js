@@ -6,7 +6,7 @@ export const langCodeDetection = {
 }
 
 export const spamDetection = {
-  name: 'Spam detect in post',
+  name: 'Spam detection',
   description: 'Nhận diện bài viết thuộc dạng spam',
   faIcon: 'clone',
   url: '/spam-detect'
@@ -14,7 +14,7 @@ export const spamDetection = {
 
 export const tagCompare = {
   name: 'Tag compare',
-  description: 'Tìm kiếm tag tương tự về cả từ ngữ lẫn ngữ nghĩa',
+  description: 'Tìm tag tương tự về cả từ lẫn ngữ nghĩa',
   faIcon: 'clone',
   url: '/tag-compare'
 }

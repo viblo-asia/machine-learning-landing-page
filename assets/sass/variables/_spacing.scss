@@ -5,6 +5,7 @@ $spacers: () !default;
 $spacers: map-merge(
     (
       0: 0,
+      '05': ($spacer * 0.5),
       1: ($spacer * 1),
       2: ($spacer * 2),
       3: ($spacer * 3),

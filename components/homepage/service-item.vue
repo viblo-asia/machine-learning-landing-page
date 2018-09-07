@@ -1,5 +1,5 @@
 <template>
-  <div class="service-item py-1 mb-2 flex flex--align-middle">
+  <div class="service-item py-1 mb-xs-only-0 mb-sm-and-up-2 flex flex--align-middle">
     <div class="service-item__icon p-1 mr-1">
       <fa-icon :icon="faIcon"/>
     </div>

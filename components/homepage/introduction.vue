@@ -1,5 +1,5 @@
 <template>
-  <el-row class="introduction py-4" id="gioi-thieu">
+  <el-row class="introduction py-sm-and-up-4" id="gioi-thieu">
     <el-col>
       <section-header>
         <template slot="title">

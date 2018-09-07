@@ -5,12 +5,12 @@
         v-for="(item, index) in menuItems"
         :key="index"
         class="navigation__item">
-        <a
-          :href="item.url"
+        <nuxt-link
+          :to="item.url"
           :title="item.name"
           class="navigation__link no-underline">
           {{ item.name }}
-        </a>
+        </nuxt-link>
       </li>
     </ul>
   </nav>
@@ -20,9 +20,9 @@
   export default {
     data: () => ({
       menuItems: [
-        { name: 'Giới thiệu', url: '#gioi-thieu' },
-        { name: 'Dịch vụ', url: '#dich-vu' },
-        { name: 'Tổng quan', url: '#tong-quan' },
+        { name: 'Giới thiệu', url: '/#gioi-thieu' },
+        { name: 'Dịch vụ', url: '/#dich-vu' },
+        { name: 'Tổng quan', url: '/#tong-quan' },
       ]
     })
   }

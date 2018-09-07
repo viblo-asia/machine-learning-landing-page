@@ -1,21 +1,49 @@
-@each $prop, $abbrev in (margin: m, padding: p) {
-  @each $size, $length in $spacers {
-    .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
-    .#{$abbrev}t-#{$size},
-    .#{$abbrev}y-#{$size} {
-      #{$prop}-top: $length !important;
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+
+@each $break-point-name, $value in $--breakpoints-spec {
+  @each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $length in $spacers {
+      .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+      .#{$abbrev}t-#{$size},
+      .#{$abbrev}y-#{$size} {
+        #{$prop}-top: $length !important;
+      }
+      .#{$abbrev}r-#{$size},
+      .#{$abbrev}x-#{$size} {
+        #{$prop}-right: $length !important;
+      }
+      .#{$abbrev}b-#{$size},
+      .#{$abbrev}y-#{$size} {
+        #{$prop}-bottom: $length !important;
+      }
+      .#{$abbrev}l-#{$size},
+      .#{$abbrev}x-#{$size} {
+        #{$prop}-left: $length !important;
+      }
     }
-    .#{$abbrev}r-#{$size},
-    .#{$abbrev}x-#{$size} {
-      #{$prop}-right: $length !important;
-    }
-    .#{$abbrev}b-#{$size},
-    .#{$abbrev}y-#{$size} {
-      #{$prop}-bottom: $length !important;
-    }
-    .#{$abbrev}l-#{$size},
-    .#{$abbrev}x-#{$size} {
-      #{$prop}-left: $length !important;
+  }
+
+  @include res($break-point-name, $--breakpoints-spec) {
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}-#{$break-point-name}-#{$size} { #{$prop}: $length !important; }
+        .#{$abbrev}t-#{$break-point-name}-#{$size},
+        .#{$abbrev}y-#{$break-point-name}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r-#{$break-point-name}-#{$size},
+        .#{$abbrev}x-#{$break-point-name}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b-#{$break-point-name}-#{$size},
+        .#{$abbrev}y-#{$break-point-name}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l-#{$break-point-name}-#{$size},
+        .#{$abbrev}x-#{$break-point-name}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="header">
-    <el-row :gutter="10" type="flex" justify="space-between" align="middle">
+    <el-row type="flex" justify="space-between" align="middle">
       <el-col>
-        <logo-wrap/>
+        <logo-wrap class="my-1"/>
       </el-col>
 
-      <el-col>
+      <el-col class="hidden-xs-only">
         <navigation/>
       </el-col>
     </el-row>
