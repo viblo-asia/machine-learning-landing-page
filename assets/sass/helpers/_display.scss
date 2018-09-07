@@ -1,0 +1,37 @@
+.no-underline {
+  text-decoration: none !important;
+}
+
+.link {
+  color: $primary;
+  font-size: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  &--plain {
+    color: #414141;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.flex {
+  display: flex !important;
+  &--column {
+    flex-direction: column;
+  }
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+  &--align-middle {
+    align-items: center;
+  }
+  &--justify-center {
+    justify-content: center;
+  }
+}

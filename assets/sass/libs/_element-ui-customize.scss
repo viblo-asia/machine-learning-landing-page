@@ -1,0 +1,19 @@
+.el-button--primary {
+  background: $--color-primary;
+  border-color: $--color-primary;
+  &:hover {
+    background: darken($--color-primary, 5);
+    border-color: darken($--color-primary, 5);
+  }
+}
+
+.el-button--primary.is-plain {
+  color: $--color-primary;
+  background: #eef3f9;
+  border-color: #bbcfe9;
+  &:hover {
+    background: $--color-primary;
+    border-color: $--color-primary;
+    color: #ffffff;
+  }
+}
