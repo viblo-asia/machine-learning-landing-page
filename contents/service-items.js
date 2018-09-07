@@ -29,9 +29,4 @@ export default [
     faIcon: 'language',
     url: '/language-detection'
   },
-  {
-    name: 'More services later...',
-    description: 'Ghé thăm thường xuyên để trải nghiệm những dịch vụ mới',
-    faIcon: 'clone'
-  },
 ]

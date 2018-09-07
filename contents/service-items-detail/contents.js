@@ -1,4 +1,4 @@
-export const postSummarization =
+export const langCodeDetect =
   `<p>
   Ứng dụng giải thuật <strong>trích xuất câu - sentences extraction</strong>
   và <strong>trích xuất từ khóa - keywords extraction</strong>
@@ -11,7 +11,7 @@ export const postSummarization =
   và hỗ trợ sinh ra mô tả cho promotion trên các trang mạng xã hội như Facebook.
 </p>`
 
-export const postAutoTagging =
+export const spamDetect =
   `<p>
   Sử dụng các kĩ thuật <strong>trích xuất từ khóa</strong> và rất nhiều kĩ thuật
   xử lý ngôn ngữ tự nhiên khác vốn đã rất thành công trong việc ứng dụng
@@ -26,7 +26,7 @@ export const postAutoTagging =
   Từ đó có thể làm cải thiện hiệu năng SEO cho sản phẩm.
 </p>`
 
-export const languageDetection =
+export const languageDetect =
   `<p>
   Sử dụng <strong>giải thuật Đồ thị N-Gram (Graph-based N-Gram)</strong>
   và các kĩ thuật <strong>xử lý dữ liệu dạng kí tự Unicode</strong>
@@ -39,7 +39,7 @@ export const languageDetection =
   trợ giúp đắc lực cho việc tìm kiếm bằng Elasticsearch được chính xác hơn.
 </p>`
 
-export const tagDuplicatesDetection =
+export const autoTagging =
   `<p>
   Dựa trên <strong>giải thuật tính toán độ đo tương tự - words similarity</strong>
   giữa các tags của Viblo để tìm ra được danh sách các tag có độ tương tự nhau về nội dung.
@@ -52,7 +52,7 @@ export const tagDuplicatesDetection =
   cho các dịch vụ khác trên Viblo như dịch vụ tự động gắn tag vào bài viết.
 </p>`
 
-export const copyPasteChecker =
+export const tagCompare =
   `<p>
   Sử dụng các kĩ thuật của xử lý ngôn ngữ tự nhiên như <strong>phân đoạn từ</strong>
   và các <strong>thuật toán so sánh độ tương tự</strong> và tìm kiếm các
@@ -64,3 +64,11 @@ export const copyPasteChecker =
   giữa hai văn bản đầu vào, giúp trích xuất ra các thành phần giống nhau
   cũng như các thành phần đã bị biến đổi nhằm đánh giá chất lượng bài viết trên Viblo.
 </p>`
+
+export default [
+  langCodeDetect,
+  spamDetect,
+  tagCompare,
+  autoTagging,
+  languageDetect,
+]

@@ -8,6 +8,13 @@
       <el-col v-for="(service, index) in services" :key="index" :md="8">
         <ServiceItem v-bind="service"/>
       </el-col>
+
+      <el-col :md="8">
+        <ServiceItem
+          name="More services later..."
+          description="Ghé thăm thường xuyên để trải nghiệm những dịch vụ mới"
+          faIcon="clone"/>
+      </el-col>
     </el-row>
   </section>
 </template>
