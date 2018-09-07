@@ -41,7 +41,6 @@
 
 <script>
   import { detectCode } from '~/api'
-  import { convertFromObject } from '~/utils/form-data'
   import { langCodeDetection as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
 
@@ -62,13 +61,8 @@
     methods: {
       onSubmit() {
         this.processing = true
-        const formData = convertFromObject(this.form)
-
-        return detectCode(formData)
-          .then(({ data, message }) => {
-            this.$message.success(message)
-            this.result = data.data.programming_language
-          })
+        return detectCode(this.form)
+          .then(({ data }) => this.result = data.data.programming_language)
           .catch(_ => this.$message.error('Something went wrong.'))
           .finally(() => this.processing = false)
       }

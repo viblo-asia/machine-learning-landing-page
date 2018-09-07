@@ -41,7 +41,6 @@
 
 <script>
   import { detectSpam } from '~/api'
-  import { convertFromObject } from '~/utils/form-data'
   import { spamDetection as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
 
@@ -68,13 +67,8 @@
     methods: {
       onSubmit() {
         this.processing = true
-        const formData = convertFromObject(this.form)
-
-        return detectSpam(formData)
-          .then(({ data, message }) => {
-            this.$message.success(message)
-            this.result = data.data.document_type
-          })
+        return detectSpam(this.form)
+          .then(({ data }) => this.result = data.data.document_type)
           .catch(_ => this.$message.error('Something went wrong.'))
           .finally(() => this.processing = false)
       }
