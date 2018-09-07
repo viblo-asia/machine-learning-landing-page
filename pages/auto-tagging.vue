@@ -35,7 +35,13 @@
     <el-row v-if="result" type="flex" justify="center">
       <el-col :md="12">
         <section-header title="Danh sách gợi ý" size="small" type="info"/>
-        <tags-list :tags="result.tags_recommend" class="mt-2"/>
+        <tags-list :tags="result.tags_recommend" class="mt-2">
+          <el-table-column
+            prop="number_posts"
+            label="Tổng số bài viết"
+            width="150"
+            align="center"/>
+        </tags-list>
       </el-col>
     </el-row>
   </div>

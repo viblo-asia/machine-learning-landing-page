@@ -31,7 +31,14 @@
       </el-col>
       <el-col :span="12">
         <section-header title="Tags đồng nghĩa" size="small" type="info"/>
-        <tags-list :tags="result.tags_same_meaning" class="mt-2"/>
+        <tags-list :tags="result.tags_same_meaning" class="mt-2">
+          <el-table-column
+            prop="distance"
+            label="Độ chính xác"
+            width="150"
+            align="center"
+            :formatter="(row, column, cellValue) => Math.round(cellValue*10000)/10000"/>
+        </tags-list>
       </el-col>
     </el-row>
   </div>
