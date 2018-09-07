@@ -12,3 +12,13 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.viblo-app {
+  min-height: 100vh;
+}
+
+.viblo-container {
+  max-width: $max-width-container;
+  margin-left: auto;
+  margin-right: auto;
+}
