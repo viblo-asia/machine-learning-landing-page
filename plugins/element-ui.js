@@ -16,6 +16,7 @@ import Button from 'element-ui/lib/button'
 import Form from 'element-ui/lib/form'
 import FormItem from 'element-ui/lib/form-item'
 import Input from 'element-ui/lib/input'
+import Switch from 'element-ui/lib/switch'
 
 import Table from 'element-ui/lib/table'
 import TableColumn from 'element-ui/lib/table-column'
@@ -39,6 +40,7 @@ export default () => {
   Vue.component('el-form', Form)
   Vue.component('el-form-item', FormItem)
   Vue.component('el-input', Input)
+  Vue.component('el-switch', Switch)
 
   Vue.component('el-table', Table)
   Vue.component('el-table-column', TableColumn)

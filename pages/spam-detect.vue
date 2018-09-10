@@ -15,6 +15,10 @@
               @input="result = null"/>
           </el-form-item>
 
+          <el-form-item label="Nội dung viết theo cú pháp markdown">
+            <el-switch v-model="form.is_markdown"/>
+          </el-form-item>
+
           <el-form-item class="flex flex--center">
             <el-button
               :disabled="!form.document"
@@ -30,9 +34,14 @@
 
     <el-row v-if="result" type="flex" justify="center">
       <el-col :span="12">
-        <el-alert :closable="false" type="info" title="" class="result">
-          <span v-if="isSpam">It is a <strong>spam</strong>. Your document type of {{ result }}.</span>
-          <span v-else>Your document type of {{ result }}. It is <strong>not</strong> a spam.</span>
+        <el-alert
+          :closable="false"
+          :type="isSpam ? 'warning' : 'success'"
+          class="result"
+          title=""
+          show-icon>
+          <span v-if="isSpam">Bài viết của bạn bị đánh giá là <strong>SPAM</strong>.</span>
+          <span v-else>Bài viết của bạn thuộc phân loại: <strong>{{ result }}</strong>.</span>
         </el-alert>
       </el-col>
     </el-row>
@@ -55,6 +64,7 @@
       result: null,
       form: {
         document: '',
+        is_markdown: true
       }
     }),
 

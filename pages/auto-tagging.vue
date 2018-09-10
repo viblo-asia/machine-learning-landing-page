@@ -52,14 +52,11 @@
   import { autoTagging as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
   import TagsList from '~/components/shared/tags-list.vue'
-  import ElSwitch from 'element-ui/lib/switch'
-  import 'element-ui/lib/theme-chalk/switch.css'
 
   export default {
     components: {
       SectionHeader,
       TagsList,
-      ElSwitch
     },
 
     data: () => ({
