@@ -1,0 +1,9 @@
+**
+!package.json
+!yarn.lock
+!.nuxt
+!server
+!nuxt
+!modules
+!static
+!nuxt.config.js
