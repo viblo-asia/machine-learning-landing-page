@@ -1,6 +1,10 @@
 <template>
-  <el-row class="introduction py-sm-and-up-4" id="gioi-thieu">
-    <el-col>
+  <el-row
+    id="gioi-thieu"
+    type="flex"
+    justify="center"
+    class="introduction py-sm-and-up-4">
+    <el-col :sm="20" :md="18">
       <section-header>
         <template slot="title">
           <h4>Viblo <span class="icon-heart">&hearts;</span> Machine learning</h4>
@@ -16,9 +20,6 @@
           giới hạn các dịch vụ này trong khuôn khổ của <strong>Viblo</strong>. Trong tương lai,
           chúng tôi sẽ tách các dịch vụ này thành các ứng dụng độc lập và bạn hoàn toàn có thể
           sử dụng chúng để xây dựng những ý tưởng của riêng mình.
-        </p>
-        <p>
-          <a href="#dich-vu" class="introduction__more link">Tìm hiểu thêm...</a>
         </p>
       </div>
     </el-col>
@@ -46,13 +47,7 @@
 
     &__text, &__text p {
       font-size: 1.1375rem;
-    }
-
-    &__more {
-      font-size: 1rem;
-      &:hover {
-        color: darken($primary, 20);
-      }
+      text-align: justify;
     }
   }
 </style>
