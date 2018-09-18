@@ -3,7 +3,8 @@
     :class="{
       'section-header': true,
       'section-header--uppercase': uppercase,
-      'section-header--underline': underline
+      'section-header--underline': underline,
+      [`section-header--align-${align}`]: true,
     }">
     <div
       class="section-header__title"
@@ -30,6 +31,10 @@
       description: String,
       uppercase: Boolean,
       underline: Boolean,
+      align: {
+        type: String,
+        default: 'center'
+      },
       size: String,
       type: String,
     }
@@ -54,6 +59,10 @@
       text-transform: capitalize;
     }
 
+    &__description {
+      font-size: 1.3rem;
+    }
+
     &--uppercase &__title {
       text-transform: uppercase;
       font-size: 3.125rem;
@@ -61,9 +70,29 @@
 
     &--underline &__line {
       border: none;
-      border-top: solid 1px $primary;
+      border-top: solid 3px $primary;
       margin-top: 1.5rem;
       width: 3.5rem;
+    }
+
+    &--align-left {
+      .section-header__title,
+      .section-header__description {
+        text-align: left;
+      }
+      .section-header__line {
+        margin-left: 0;
+      }
+    }
+
+    &--align-right {
+      .section-header__title,
+      .section-header__description {
+        text-align: right;
+      }
+      .section-header__line {
+        margin-right: 0;
+      }
     }
   }
 </style>

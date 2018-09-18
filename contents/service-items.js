@@ -1,5 +1,5 @@
 export const langCodeDetection = {
-  name: 'Programming language detect',
+  name: 'Programming language detection',
   description: 'Xác định ngôn ngữ lập trình',
   image: '/images/our-services/1.png',
   url: '/programming-language-detect'

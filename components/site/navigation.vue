@@ -34,6 +34,7 @@
 
     &__menu {
       list-style: none;
+      margin: 0;
     }
 
     &__item {

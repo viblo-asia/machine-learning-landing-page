@@ -1,8 +1,8 @@
 <template>
-  <div class="header">
+  <div class="header py-05">
     <el-row type="flex" justify="space-between" align="middle">
       <el-col>
-        <logo-wrap class="my-1"/>
+        <logo-wrap/>
       </el-col>
 
       <el-col class="hidden-xs-only">

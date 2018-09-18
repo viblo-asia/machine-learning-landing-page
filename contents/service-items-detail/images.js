@@ -1,13 +1,13 @@
-export const langCodeDetect = '/images/thumb/parallax-15.jpg'
-export const spamDetect = '/images/thumb/parallax-16.jpg'
-export const tagCompare = '/images/thumb/parallax-17.jpg'
-export const autoTagging = '/images/thumb/parallax-18.jpg'
-export const languageDetect = '/images/thumb/parallax-20.jpg'
+export const langCodeDetect = '/images/how-work/1.png'
+export const spamDetect = '/images/how-work/2.png'
+export const tagCompare = '/images/how-work/3.png'
+export const autoTagging = '/images/how-work/4.png'
+export const languageDetect = '/images/how-work/5.png'
 
 export default [
   langCodeDetect,
   spamDetect,
   tagCompare,
   autoTagging,
-  langCodeDetect,
+  languageDetect,
 ]

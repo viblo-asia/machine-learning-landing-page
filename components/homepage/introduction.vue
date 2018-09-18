@@ -1,14 +1,14 @@
 <template>
-  <section id="gioi-thieu">
+  <section id="gioi-thieu" class="pt-2">
     <section-header>
       <template slot="title">
-        <h4 class="mb-0">About us</h4>
+        <h4 class="mb-2">About us</h4>
       </template>
 
       <p>Blog kỹ thuật dành cho các lập trình viên Việt Nam</p>
     </section-header>
 
-    <el-row :gutter="30" class="introduction__brand mt-4">
+    <el-row :gutter="30" class="introduction__brand mt-5">
       <el-col
         v-for="(brand, index) in brands"
         :key="index"

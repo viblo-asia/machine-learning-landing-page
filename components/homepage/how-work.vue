@@ -1,11 +1,18 @@
 <template>
   <section class="how-work py-sm-and-up-4 py-xs-only-2" id="tong-quan">
-    <section-header :uppercase="true" title="How our services work?">
-      Bạn tò mò về cách thức hoạt động của dịch vụ trên?
-      Dưới đây là ý tưởng chung của các dịch vụ đó!
-    </section-header>
+    <div class="how-work__header">
+      <section-header :uppercase="true">
+        <template slot="title">
+          <div class="how-work__header-title">How our services work?</div>
+        </template>
+        <p class="how-work__header-description">
+          Bạn tò mò về cách thức hoạt động của dịch vụ trên? <br>
+          Dưới đây là ý tưởng chung của các dịch vụ đó!
+        </p>
+      </section-header>
+    </div>
 
-    <div class="mt-sm-and-up-4 mt-xs-only-1">
+    <div class="viblo-container mt-sm-and-up-4 mt-xs-only-1">
       <how-work-item
         v-for="(service, index) in services"
         :key="index"
@@ -39,3 +46,18 @@
     })
   }
 </script>
+
+<style lang="scss">
+  @import '~assets/sass/variables/colors';
+
+  .how-work {
+    &__header {
+      background: $primary;
+      padding: 7rem;
+      &-title, &-description {
+        color: #ffffff;
+      }
+    }
+  }
+</style>
+

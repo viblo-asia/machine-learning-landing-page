@@ -1,5 +1,5 @@
 <template>
-  <section class="our-services py-sm-and-up-4 py-xs-only-2" id="dich-vu">
+  <section class="our-services py-sm-and-up-5 py-xs-only-2" id="dich-vu">
     <section-header title="Our services" :uppercase="true">
       Các dịch vụ chúng tôi đã và đang phát triển.
     </section-header>
