@@ -1,52 +1,68 @@
 <template>
-  <el-row
-    id="gioi-thieu"
-    type="flex"
-    justify="center"
-    class="introduction py-sm-and-up-4">
-    <el-col :sm="20" :md="18">
-      <section-header>
-        <template slot="title">
-          <h4>Viblo <span class="icon-heart">&hearts;</span> Machine learning</h4>
-        </template>
-      </section-header>
+  <section id="gioi-thieu">
+    <section-header>
+      <template slot="title">
+        <h4 class="mb-0">About us</h4>
+      </template>
 
-      <div class="introduction__text">
-        <p>
-          Chúng tôi ứng dụng các kỹ thuật trong <strong>Machine Learning, Deep Learning</strong>
-          và đặc biệt là <strong>Natural Language Processing</strong> để xây dựng các dịch vụ
-          hiện đang được sử dụng bởi <a href="https://viblo.asia" class="link"><strong>Viblo</strong></a>
-          (Một blog kĩ thuật dành cho các lập trình viên Việt Nam). Tất nhiên, chúng tôi không muốn
-          giới hạn các dịch vụ này trong khuôn khổ của <strong>Viblo</strong>. Trong tương lai,
-          chúng tôi sẽ tách các dịch vụ này thành các ứng dụng độc lập và bạn hoàn toàn có thể
-          sử dụng chúng để xây dựng những ý tưởng của riêng mình.
-        </p>
-      </div>
-    </el-col>
-  </el-row>
+      <p>Blog kỹ thuật dành cho các lập trình viên Việt Nam</p>
+    </section-header>
+
+    <el-row :gutter="30" class="introduction__brand mt-4">
+      <el-col
+        v-for="(brand, index) in brands"
+        :key="index"
+        :sm="8">
+        <div class="introduction__brand-item flex flex--center flex--column">
+          <img
+            :src="brand.image"
+            :alt="brand.name"
+            class="introduction__brand-item-image"/>
+          <h3 class="introduction__brand-item-name">{{ brand.name }}</h3>
+        </div>
+      </el-col>
+    </el-row>
+
+    <el-row type="flex" justify="center" class="py-sm-and-up-2">
+      <el-col class="introduction__contents" v-html="introduction"/>
+    </el-row>
+  </section>
 </template>
 
 <script>
   import SectionHeader from '~/components/shared/section-header.vue'
+  import { brands, introduction } from '~/contents/introductions'
 
   export default {
     components: {
       SectionHeader
-    }
+    },
+
+    data: () => ({ brands, introduction })
   }
 </script>
 
 <style lang="scss">
-  @import "~assets/sass/variables/colors";
+  @import '~assets/sass/variables/colors';
 
   .introduction {
-    .icon-heart {
-      color: #ff0000;
-      font-size: 2.4rem;
+    &__brand-item {
+      &-image {
+        height: 9.375rem;
+        width: auto;
+      }
+      &-name {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $primary;
+        max-width: 15rem;
+        text-align: center;
+        text-transform: capitalize;
+      }
     }
 
-    &__text, &__text p {
-      font-size: 1.1375rem;
+    &__contents {
+      line-height: 2.3;
       text-align: justify;
     }
   }

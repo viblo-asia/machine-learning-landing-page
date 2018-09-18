@@ -1,5 +1,10 @@
 <template>
-  <div :class="{ 'section-header': true, 'section-header--uppercase': uppercase }">
+  <div
+    :class="{
+      'section-header': true,
+      'section-header--uppercase': uppercase,
+      'section-header--underline': underline
+    }">
     <div
       class="section-header__title"
       :class="{ [`section-header__title--${type}`]: !!type, [`section-header__title--${size}`]: !!size }">
@@ -14,7 +19,7 @@
       </slot>
     </div>
 
-    <hr v-if="uppercase" class="section-header__line">
+    <hr v-if="underline" class="section-header__line">
   </div>
 </template>
 
@@ -24,6 +29,7 @@
       title: String,
       description: String,
       uppercase: Boolean,
+      underline: Boolean,
       size: String,
       type: String,
     }
@@ -43,24 +49,17 @@
 
     &__title {
       color: $primary;
-      font-size: 1.875rem;
+      font-size: 3rem;
       font-weight: 700;
       text-transform: capitalize;
-      &--small {
-        font-size: 1.4rem;
-      }
-      &--info {
-        color: #333333;
-        text-transform: initial;
-      }
     }
 
     &--uppercase &__title {
       text-transform: uppercase;
-      font-size: 1.6rem;
+      font-size: 3.125rem;
     }
 
-    &__line {
+    &--underline &__line {
       border: none;
       border-top: solid 1px $primary;
       margin-top: 1.5rem;
