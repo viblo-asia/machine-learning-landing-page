@@ -1,7 +1,7 @@
 <template>
   <div class="service-item py-1 mb-xs-only-0 mb-sm-and-up-2 flex flex--align-middle">
-    <div class="service-item__icon p-1 mr-1">
-      <fa-icon :icon="faIcon"/>
+    <div class="p-1 mr-1">
+      <img :src="image" :alt="name"/>
     </div>
 
     <div class="service-item__content">
@@ -20,7 +20,7 @@
     props: {
       name: String,
       description: String,
-      faIcon: String,
+      image: String,
       url: String,
     }
   }
@@ -30,24 +30,17 @@
   @import "~assets/sass/variables/colors";
 
   .service-item {
-    &__icon {
-      background: $primary;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      color: white;
-      display: block;
-      font-size: 1rem;
-      width: 50px;
-      height: 50px;
-      line-height: 1;
-    }
-
+    height: 9.375rem;
     &__name {
       margin-bottom: 0.5rem;
       > .link {
+        color: $primary;
         text-transform: capitalize;
       }
+    }
+
+    &__description {
+      text-align: justify;
     }
   }
 </style>

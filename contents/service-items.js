@@ -1,35 +1,35 @@
 export const langCodeDetection = {
   name: 'Programming language detect',
   description: 'Xác định ngôn ngữ lập trình',
-  faIcon: 'list-alt',
+  image: '/images/our-services/1.png',
   url: '/programming-language-detect'
 }
 
 export const spamDetection = {
   name: 'Spam detection',
   description: 'Nhận diện bài viết thuộc dạng spam',
-  faIcon: 'clone',
+  image: '/images/our-services/2.png',
   url: '/spam-detect'
 }
 
 export const tagCompare = {
   name: 'Tag compare',
   description: 'Tìm tag tương tự về cả từ lẫn ngữ nghĩa',
-  faIcon: 'tags',
+  image: '/images/our-services/3.png',
   url: '/tag-compare'
 }
 
 export const autoTagging = {
   name: 'Auto tagging',
   description: 'Tự động đánh tag cho văn bản',
-  faIcon: 'tags',
+  image: '/images/our-services/4.png',
   url: '/auto-tagging'
 }
 
 export const languageDetection = {
   name: 'Language detection',
   description: 'Xác định ngôn ngữ chính của bài viết',
-  faIcon: 'language',
+  image: '/images/our-services/5.png',
   url: '/language-detection'
 }
 
