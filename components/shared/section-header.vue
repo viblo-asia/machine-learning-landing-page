@@ -57,15 +57,24 @@
       font-size: 3rem;
       font-weight: 700;
       text-transform: capitalize;
+      @media screen and (max-width: 768px) {
+        font-size: 2.2rem;
+      }
     }
 
     &__description {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
     }
 
     &--uppercase &__title {
       text-transform: uppercase;
       font-size: 3.125rem;
+      @media screen and (max-width: 768px) {
+        font-size: 2.4rem;
+      }
     }
 
     &--underline &__line {

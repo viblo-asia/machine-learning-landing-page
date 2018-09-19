@@ -1,5 +1,5 @@
 <template>
-  <section class="how-work-item" :class="{ 'how-work-item--reverse': reverse }">
+  <section class="how-work-item px-md-and-down-1" :class="{ 'how-work-item--reverse': reverse }">
     <el-row type="flex" align="middle">
       <el-col :xs="24" :sm="8" class="flex">
         <div class="how-work-item__main">

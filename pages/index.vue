@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-reset">
     <slider/>
 
     <section class="viblo-container">
@@ -26,3 +26,10 @@
     }
   }
 </script>
+
+<style>
+  .p-reset {
+    margin: -20px;
+  }
+</style>
+

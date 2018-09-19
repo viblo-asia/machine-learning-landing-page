@@ -1,6 +1,6 @@
 <template>
   <div class="viblo-container">
-    <section-header :uppercase="true" :title="service.name">
+    <section-header :title="service.name" :underline="true">
       {{ service.description }}
     </section-header>
 

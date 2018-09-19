@@ -1,7 +1,7 @@
 <template>
   <div class="service-item py-1 mb-xs-only-0 mb-sm-and-up-2 flex flex--align-middle">
-    <div class="p-1 mr-1">
-      <img :src="image" :alt="name"/>
+    <div class="p-xs-only-05 p-sm-and-up-1 mr-xs-only-05 mr-sm-and-up-1">
+      <img :src="image" :alt="name" class="service-item__image"/>
     </div>
 
     <div class="service-item__content">
@@ -31,6 +31,12 @@
 
   .service-item {
     height: 9.375rem;
+    &__image {
+      @media screen and (max-width: 768px) {
+        max-width: 2.8rem;
+      }
+    }
+
     &__name {
       margin-bottom: 0.5rem;
       > .link {

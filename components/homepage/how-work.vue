@@ -1,11 +1,11 @@
 <template>
-  <section class="how-work py-sm-and-up-4 py-xs-only-2" id="tong-quan">
-    <div class="how-work__header">
+  <section class="how-work py-sm-and-up-4" id="tong-quan">
+    <div class="how-work__header py-3">
       <section-header :uppercase="true">
         <template slot="title">
           <div class="how-work__header-title">How our services work?</div>
         </template>
-        <p class="how-work__header-description">
+        <p class="how-work__header-description mt-xs-only-2">
           Bạn tò mò về cách thức hoạt động của dịch vụ trên? <br>
           Dưới đây là ý tưởng chung của các dịch vụ đó!
         </p>
@@ -53,7 +53,6 @@
   .how-work {
     &__header {
       background: $primary;
-      padding: 7rem;
       &-title, &-description {
         color: #ffffff;
       }

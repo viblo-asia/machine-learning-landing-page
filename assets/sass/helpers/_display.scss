@@ -20,7 +20,7 @@
 }
 
 .flex {
-  display: flex !important;
+  display: flex;
   &--column {
     flex-direction: column;
   }
