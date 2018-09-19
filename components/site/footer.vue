@@ -1,27 +1,19 @@
 <template>
   <footer class="footer my-3">
-    <el-row>
-      <el-col class="flex flex--center">
-        <ul class="footer__links flex pl-0">
-          <li class="footer__link footer__link--fb">
-            <a :href="facebookPageURL" target="_blank" :title="facebookPageTitle">
-              <img :src="facebookIcon" :alt="facebookPageTitle">
-            </a>
-          </li>
-          <li class="footer__link footer__link--viblo">
-            <a href="https://viblo.asia" target="_blank" title="Viblo">
-              <img :src="vibloSmallIcon" alt="Viblo">
-            </a>
-          </li>
-        </ul>
+    <el-row type="flex" justify="center">
+      <el-col>
+        <a
+          href="https://viblo.asia"
+          target="blank"
+          class="footer__logo mt-1">
+          <img src="https://viblo.asia/logo_full.svg" alt="Viblo logo"/>
+        </a>
       </el-col>
     </el-row>
 
     <el-row>
       <el-col>
-        <p class="footer__copyright">
-          &copy; 2018 Viblo. All rights reserved.
-        </p>
+        <p class="footer__copyright">&copy; 2018 Viblo. All rights reserved.</p>
       </el-col>
     </el-row>
   </footer>
@@ -42,42 +34,23 @@
 </script>
 
 <style lang="scss">
+  @import '~assets/sass/variables/colors';
+
   .footer-bg {
-    background: #152133;
+    background: $bg-footer;
   }
 
   .footer {
-    &__links {
-      list-style-type: none;
-    }
-
-    &__link {
+    &__logo {
       display: block;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      width: 30px;
-      height: 30px;
-      overflow: hidden;
       img {
-        width: 100%;
-        height: 100%;
+        max-height: 2.5rem;
       }
-      &--fb {
-        background: #3b579d;
-      }
-      &--viblo {
-        background: #ffffff;
-      }
-    }
-
-    &__link + &__link {
-      margin-left: 1rem;
     }
 
     &__copyright {
-      color: #9a9a9a;
-      font-size: 0.8375rem;
+      font-size: 1.1rem;
+      color: $primary;
       text-align: center;
     }
   }
