@@ -51,6 +51,7 @@
 <script>
   import { detectSpam } from '~/api'
   import { spamDetection as service } from '~/contents/service-items'
+  import * as form from '~/contents/form-default/auto-tagging'
   import SectionHeader from '~/components/shared/section-header.vue'
 
   export default {
@@ -62,10 +63,7 @@
       service,
       processing: false,
       result: null,
-      form: {
-        document: '',
-        is_markdown: true
-      }
+      form
     }),
 
     computed: {

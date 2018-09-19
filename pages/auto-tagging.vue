@@ -50,6 +50,7 @@
 <script>
   import { autoTagging } from '~/api'
   import { autoTagging as service } from '~/contents/service-items'
+  import * as form from '~/contents/form-default/auto-tagging'
   import SectionHeader from '~/components/shared/section-header.vue'
   import TagsList from '~/components/shared/tags-list.vue'
 
@@ -63,10 +64,7 @@
       service,
       processing: false,
       result: null,
-      form: {
-        document: '',
-        is_markdown: true,
-      }
+      form
     }),
 
     methods: {

@@ -61,7 +61,7 @@
       processing: false,
       result: null,
       form: {
-        tag: '',
+        tag: 'Machine Learning',
       }
     }),
 
