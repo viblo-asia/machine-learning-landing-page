@@ -42,7 +42,7 @@
 <script>
   import { detectCode } from '~/api'
   import { langCodeDetection as service } from '~/contents/service-items'
-  import * as form from '~/contents/form-default/programming-language-detection'
+  import * as formDefault from '~/contents/form-default/programming-language-detection'
   import SectionHeader from '~/components/shared/section-header.vue'
 
   export default {
@@ -54,7 +54,7 @@
       service,
       processing: false,
       result: null,
-      form
+      form: Object.assign({}, formDefault)
     }),
 
     methods: {

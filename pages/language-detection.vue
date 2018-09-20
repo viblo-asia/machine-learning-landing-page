@@ -49,7 +49,7 @@
 <script>
   import { detectLanguage } from '~/api'
   import { languageDetection as service } from '~/contents/service-items'
-  import * as form from '~/contents/form-default/auto-tagging'
+  import * as formDefault from '~/contents/form-default/auto-tagging'
   import SectionHeader from '~/components/shared/section-header.vue'
 
   const normalizeResult = (data) => data.reduce((result, item) => {
@@ -68,7 +68,7 @@
       service,
       processing: false,
       result: null,
-      form
+      form: Object.assign({}, formDefault)
     }),
 
     methods: {
