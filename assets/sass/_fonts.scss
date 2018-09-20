@@ -1,23 +1,10 @@
-@font-face {
-  font-family: 'UTM';
-  src: url('~assets/fonts/UTM Avo.ttf');
-}
+/**   Montserrat font-weight
 
-@font-face {
-  font-family: 'UTM';
-  src: url('~assets/fonts/UTM AvoBold.ttf');
-  font-weight: bold;
-}
+200:  Extra light
+400:  Regular
+500:  Medium
+700:  Bold
 
-@font-face {
-  font-family: 'UTM';
-  src: url('~assets/fonts/UTM AvoItalic.ttf');
-  font-style: italic;
-}
+*/
 
-@font-face {
-  font-family: 'UTM';
-  src: url('~assets/fonts/UTM AvoBold_Italic.ttf');
-  font-weight: bold;
-  font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700&subset=vietnamese');

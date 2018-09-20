@@ -28,6 +28,7 @@
 
 <style lang="scss">
   @import "~assets/sass/variables/colors";
+  @import '~assets/sass/variables/fonts';
 
   .service-item {
     height: 9.375rem;
@@ -40,13 +41,11 @@
     &__name {
       margin-bottom: 0.5rem;
       > .link {
+        font-weight: $--fw-medium;
+        font-size: 1.125rem;
         color: $primary;
         text-transform: capitalize;
       }
-    }
-
-    &__description {
-      text-align: justify;
     }
   }
 </style>

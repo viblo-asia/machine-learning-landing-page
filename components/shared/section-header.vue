@@ -43,6 +43,7 @@
 
 <style lang="scss">
   @import "~assets/sass/variables/colors";
+  @import "~assets/sass/variables/fonts";
 
   .section-header {
     &__title,
@@ -55,7 +56,7 @@
     &__title {
       color: $primary;
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: $--fw-section-header--normal;
       text-transform: capitalize;
       @media screen and (max-width: 768px) {
         font-size: 2.2rem;
@@ -70,8 +71,9 @@
     }
 
     &--uppercase &__title {
-      text-transform: uppercase;
       font-size: 3.125rem;
+      font-weight: $--fw-section-header--uppercase;
+      text-transform: uppercase;
       @media screen and (max-width: 768px) {
         font-size: 2.4rem;
       }

@@ -1,6 +1,6 @@
 <template>
   <section class="how-work-item px-md-and-down-1" :class="{ 'how-work-item--reverse': reverse }">
-    <el-row type="flex" align="middle">
+    <el-row type="flex" align="middle" justify="space-between">
       <el-col :xs="24" :sm="8" class="flex">
         <div class="how-work-item__main">
           <section-header
@@ -20,7 +20,7 @@
         </div>
       </el-col>
 
-      <el-col :sm="16" class="how-work-item__image flex flex--align-middle hidden-xs-only">
+      <el-col :xs="24" :sm="12" class="how-work-item__image flex flex--align-middle hidden-xs-only">
         <img :src="image" :alt="title"/>
       </el-col>
     </el-row>

@@ -44,6 +44,7 @@
 
 <style lang="scss">
   @import '~assets/sass/variables/colors';
+  @import '~assets/sass/variables/fonts';
 
   .introduction {
     &__brand-item {
@@ -56,7 +57,7 @@
       }
       &-name {
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: $--fw-medium;
         color: $primary;
         max-width: 15rem;
         text-align: center;

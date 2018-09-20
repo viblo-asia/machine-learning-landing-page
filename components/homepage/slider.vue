@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <img src="/images/slider.png" alt="Viblo's machine learning banner"/>
+    <img src="/images/hero/slider.png" alt="Viblo's machine learning banner"/>
   </div>
 </template>
 

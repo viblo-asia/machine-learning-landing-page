@@ -1,0 +1,12 @@
+$--fw-extra-light: 200;
+$--fw-regular: 400;
+$--fw-medium: 500;
+$--fw-bold: 700;
+
+$--default-font-family: 'Montserrat', sans-serif, '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+$--default-font-weight: $--fw-regular;
+
+/** Hero section **/
+$--fw-hero-heading: $--fw-extra-light;
+$--fw-section-header--uppercase: $--fw-bold;
+$--fw-section-header--normal: $--fw-medium;
