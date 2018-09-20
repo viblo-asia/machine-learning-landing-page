@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer my-3">
+  <footer class="footer my-sm-and-up-3 my-xs-only-1">
     <el-row type="flex" justify="center">
       <el-col>
         <a
