@@ -1,21 +1,26 @@
 <template>
-  <el-container class="viblo-app">
-    <el-header ref="stickyHeader" height="auto" class="el-header--sticky">
-      <div class="viblo-container">
-        <app-header/>
-      </div>
-    </el-header>
+  <div id="viblo-background">
+    <el-container class="viblo-app">
+      <!-- Header -->
+      <el-header ref="stickyHeader" height="auto" class="el-header--sticky">
+        <div class="viblo-container">
+          <app-header/>
+        </div>
+      </el-header>
 
-    <el-main>
-      <nuxt/>
-    </el-main>
+      <!-- Main contents -->
+      <el-main>
+        <nuxt/>
+      </el-main>
 
-    <el-footer height="auto" class="footer-bg">
-      <div class="viblo-container">
-        <app-footer/>
-      </div>
-    </el-footer>
-  </el-container>
+      <!-- Footer -->
+      <el-footer height="auto" class="footer-bg">
+        <div class="viblo-container">
+          <app-footer/>
+        </div>
+      </el-footer>
+    </el-container>
+  </div>
 </template>
 
 <script>
