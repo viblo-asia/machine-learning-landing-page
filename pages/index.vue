@@ -42,9 +42,7 @@
     mounted() {
       require('particles.js')
 
-      this.$nextTick(() => {
-        this.initParticlesJS()
-      })
+      this.$nextTick(() => this.initParticlesJS())
     },
 
     beforeDestroy() {
