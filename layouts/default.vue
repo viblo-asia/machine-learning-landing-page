@@ -1,5 +1,5 @@
 <template>
-  <div id="viblo-background">
+  <div>
     <el-container class="viblo-app">
       <!-- Header -->
       <el-header ref="stickyHeader" height="auto" class="el-header--sticky">
