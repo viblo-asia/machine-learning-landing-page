@@ -46,6 +46,7 @@
 
 <script>
   import { tagCompare } from '~/api'
+  import { pageSEO } from '~/utils/seo'
   import { tagCompare as service } from '~/contents/service-items'
   import SectionHeader from '~/components/shared/section-header.vue'
   import TagsList from '~/components/shared/tags-list.vue'
@@ -73,6 +74,14 @@
           .catch(_ => this.$message.error('Something went wrong.'))
           .finally(() => this.processing = false)
       }
-    }
+    },
+
+    head: () => ({
+      title: `${service.name} service - Viblo Machine Learning`,
+      meta: pageSEO({
+        title: `${service.name} service - Viblo Machine Learning`,
+        description: service.description
+      }),
+    })
   }
 </script>

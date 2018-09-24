@@ -48,6 +48,7 @@
 
 <script>
   import { detectLanguage } from '~/api'
+  import { pageSEO } from '~/utils/seo'
   import { languageDetection as service } from '~/contents/service-items'
   import * as formDefault from '~/contents/form-default/auto-tagging'
   import SectionHeader from '~/components/shared/section-header.vue'
@@ -82,6 +83,14 @@
           .catch(_ => this.$message.error('Something went wrong.'))
           .finally(() => this.processing = false)
       }
-    }
+    },
+
+    head: () => ({
+      title: `${service.name} service - Viblo Machine Learning`,
+      meta: pageSEO({
+        title: `${service.name} service - Viblo Machine Learning`,
+        description: service.description
+      }),
+    })
   }
 </script>

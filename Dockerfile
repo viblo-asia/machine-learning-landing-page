@@ -18,4 +18,4 @@ ENV PORT=3000
 
 EXPOSE 3000
 
-CMD ["node", "server/index.js"]
+CMD ["node", "-r", "esm", "server/index.js"]
