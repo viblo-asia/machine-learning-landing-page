@@ -1,4 +1,6 @@
-const { defaultSEOData, pageSEO, metaTag } = require('./utils/seo')
+require('dotenv').config()
+
+const { defaultSEOData, pageSEO, metaTag } = require('esm')(module)('./utils/seo')
 
 module.exports = {
   dev: process.env.NODE_ENV !== 'production',
@@ -21,6 +23,23 @@ module.exports = {
   css: [
     '~/assets/sass/libs/element-ui.scss',
     '~/assets/sass/app.scss',
+  ],
+
+  modules: [
+    // Google analytics:
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: process.env.GOOGLE_ANALYTICS_TRACK_ID,
+        autoTracking: {
+          pageviewTemplate: route => ({
+            page: `/machine-learning-page${route.path}`,
+            title: document.title,
+            location: window.location.href
+          })
+        }
+      }
+    ],
   ],
 
   plugins: [
