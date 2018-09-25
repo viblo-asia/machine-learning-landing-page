@@ -7,7 +7,7 @@
     <el-row class="my-2">
       <el-col>
         <el-form :model="form">
-          <el-form-item label="Nhập nội dung bài viết cần kiểm tra spam">
+          <el-form-item :label="$t('form.labels.enter_your_document')">
             <el-input
               v-model="form.document"
               :autosize="{ minRows: 6 }"
@@ -15,7 +15,7 @@
               @input="result = null"/>
           </el-form-item>
 
-          <el-form-item label="Nội dung viết theo cú pháp markdown">
+          <el-form-item :label="$t('form.labels.enable_markdown_syntax')">
             <el-switch v-model="form.is_markdown"/>
           </el-form-item>
 
@@ -40,8 +40,8 @@
           class="result"
           title=""
           show-icon>
-          <span v-if="isSpam">Bài viết của bạn bị đánh giá là <strong>SPAM</strong>.</span>
-          <span v-else>Bài viết của bạn thuộc phân loại: <strong>{{ result }}</strong>.</span>
+          <span v-if="isSpam" v-html="$t('form.messages.is_spam')"/>
+          <span v-else v-html="$t('form.messages.is_not_spam', { type: result })"/>
         </el-alert>
       </el-col>
     </el-row>
@@ -50,8 +50,8 @@
 
 <script>
   import { detectSpam } from '~/api'
-  import { pageSEO } from '~/utils/seo'
-  import { spamDetection as service } from '~/contents/service-items'
+  import { servicePage } from '~/utils/page'
+  import { getServiceItem } from '~/contents/services'
   import * as formDefault from '~/contents/form-default/auto-tagging'
   import SectionHeader from '~/components/shared/section-header.vue'
 
@@ -60,12 +60,14 @@
       SectionHeader
     },
 
-    data: () => ({
-      service,
-      processing: false,
-      result: null,
-      form: Object.assign({}, formDefault)
-    }),
+    data() {
+      return {
+        service: getServiceItem(this, 'spam_detection'),
+        processing: false,
+        result: null,
+        form: Object.assign({}, formDefault)
+      }
+    },
 
     computed: {
       isSpam() {
@@ -78,18 +80,14 @@
         this.processing = true
         return detectSpam(this.form)
           .then(({ data }) => this.result = data.data.document_type)
-          .catch(_ => this.$message.error('Something went wrong.'))
+          .catch(_ => this.$message.error(this.$t('errors.something_wrong')))
           .finally(() => this.processing = false)
       }
     },
 
-    head: () => ({
-      title: `${service.name} service - Viblo Machine Learning`,
-      meta: pageSEO({
-        title: `${service.name} service - Viblo Machine Learning`,
-        description: service.description
-      }),
-    })
+    head() {
+      return servicePage(this.service)
+    }
   }
 </script>
 

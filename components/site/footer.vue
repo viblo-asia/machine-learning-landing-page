@@ -13,7 +13,7 @@
 
     <el-row>
       <el-col>
-        <p class="footer__copyright">&copy; 2018 Viblo. All rights reserved.</p>
+        <p v-html="$t('footer.copyright')" class="footer__copyright"/>
       </el-col>
     </el-row>
   </footer>

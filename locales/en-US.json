@@ -1,0 +1,107 @@
+{
+  "home": {
+    "introduction": {
+      "title": "About us",
+      "description": "Viblo is a platform for technical knowledge sharing",
+      "machine_learning": "Machine learning",
+      "natural_language_processing": "Natural language processing",
+      "deep_learning": "Deep learning",
+      "contents": "Currently, we are applying different <strong>Machine Learning</strong>, <strong>Deep Learning</strong> approaches, as well as, state-of-the-art <strong>Natural Language Processing</strong> techniques to our services on Viblo. However, we don’t want to limit our service just inside Viblo platform. In the near future, we will expand our current services to stand-alone applications."
+    },
+
+    "our_services": {
+      "title": "Our services",
+      "description": "Our up and running services"
+    },
+
+    "how_work": {
+      "title": "How do our services work?",
+      "description": "Are you curious about our services?<br>This is how we did it."
+    }
+  },
+
+  "form": {
+    "labels": {
+      "enter_your_code": "Please enter the code that you want to test",
+      "enter_your_document": "Please enter your document",
+      "enter_your_tag": "Enter your tag's name which you want to find the same tags",
+      "enable_markdown_syntax": "The document is writen in Markdown syntax",
+
+      "suggestions": "Suggestions",
+      "total_posts": "Total posts",
+      "tag_same_words": "Tag's same words",
+      "tag_same_meaning": "Tag's same meaning",
+      "tag_name": "Tag name",
+
+      "language": "Language",
+      "lang_code": "Lang code",
+      "exact": "Accuracy",
+
+      "detected_programming_language": "The detected programming language"
+    },
+    "messages": {
+      "is_spam": "Your documnet is detected as <strong>SPAM</strong>.",
+      "is_not_spam": "Your document is type of <strong>{type}</strong>. It's not spam.",
+      "no_data": "Không có dữ liệu"
+    }
+  },
+
+  "errors": {
+    "something_wrong": "Something went wrong."
+  },
+
+  "services": {
+    "programming_language_detection": {
+      "name": "Programming language detection",
+      "description": "Automatically detect programming language",
+      "contents": "<p>Our service is capable of automatically identifying the programming language that is in-use. With the detected programming language, we can highlight the code, as well as, put it in the proper format...</p>"
+    },
+    "spam_detection": {
+      "name": "Spam detection",
+      "description": "Identify whether a post is spam or not",
+      "contents": "<p>We train the spam detector with about <strong>15000 labeled posts</strong> from Viblo, news, and advertisements as well. The accuracy of our spam detector is reported to be extremely high <strong>(99.7%)</strong> and the processing time is impressively low (ms).</p>"
+    },
+    "tag_compare": {
+      "name": "Tag compare",
+      "description": "Find tags which have the same meaning",
+      "contents": "<p>Our service can automatically find tags which have the same meanings. The training data are technical posts from Viblo platforms and their corresponding tags.</p>"
+    },
+    "auto_tagging": {
+      "name": "Auto tagging",
+      "description": "Automatically find relevant tags for a post",
+      "contents": "<p>We train the auto-tagging model with a large number of posts from Viblo which contain a lot of technical keywords. After the training phase is done, we can use it to find relevant tags for a given post.</p>"
+    },
+    "language_detection": {
+      "name": "Language detection",
+      "description": "Detect the language of a post",
+      "contents": "<p>We employ <strong>the Graph-based N-Gram technique and other methods for handling Unicode</strong> characters to detect language written in a post. With the detected language, we can help Viblo users to find suitable posts to their need. Besides that, our language detector can effectively aid Elasticsearch engine to achieve more accurate results.</p>"
+    },
+    "more": {
+      "name": "More services later...",
+      "description": "Come back later for more awesome services"
+    }
+  },
+
+  "footer": {
+    "copyright": "&copy; 2018 Viblo. All rights reserved."
+  },
+
+  "navigation": {
+    "about": {
+      "label": "About us",
+      "section_id": "about-us"
+    },
+    "services": {
+      "label": "Services",
+      "section_id": "services"
+    },
+    "summary": {
+      "label": "Summary",
+      "section_id": "summary"
+    }
+  },
+
+  "label": {
+    "try_it_now": "Try it now!"
+  }
+}

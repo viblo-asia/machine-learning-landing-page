@@ -1,11 +1,11 @@
 <template>
-  <section id="gioi-thieu" class="pt-sm-and-up-3">
+  <section :id="$t('navigation.about.section_id')" class="pt-sm-and-up-3">
     <section-header :uppercase="true">
       <template slot="title">
-        <h4 class="my-sm-and-up-2 my-xs-only-1">About us</h4>
+        <h4 class="my-sm-and-up-2 my-xs-only-1">{{ $t('home.introduction.title') }}</h4>
       </template>
 
-      <p>Blog kỹ thuật dành cho các lập trình viên Việt Nam</p>
+      <p>{{ $t('home.introduction.description') }}</p>
     </section-header>
 
     <el-row :gutter="30" class="introduction__brand">
@@ -18,27 +18,43 @@
             :src="brand.image"
             :alt="brand.name"
             class="introduction__brand-item-image"/>
-          <h3 class="introduction__brand-item-name">{{ brand.name }}</h3>
+          <h3 class="introduction__brand-item-name">{{ $t(brand.name) }}</h3>
         </div>
       </el-col>
     </el-row>
 
     <el-row type="flex" justify="center" class="py-sm-and-up-2">
-      <el-col class="introduction__contents px-sm-and-down-1" v-html="introduction"/>
+      <el-col
+        v-html="$t('home.introduction.contents')"
+        class="introduction__contents px-sm-and-down-1"/>
     </el-row>
   </section>
 </template>
 
 <script>
   import SectionHeader from '~/components/shared/section-header.vue'
-  import { brands, introduction } from '~/contents/introductions'
 
   export default {
     components: {
       SectionHeader
     },
 
-    data: () => ({ brands, introduction })
+    data: () => ({
+      brands: [
+        {
+          name: 'home.introduction.machine_learning',
+          image: '/images/introductions/1.svg'
+        },
+        {
+          name: 'home.introduction.natural_language_processing',
+          image: '/images/introductions/2.svg'
+        },
+        {
+          name: 'home.introduction.deep_learning',
+          image: '/images/introductions/3.svg'
+        }
+      ]
+     })
   }
 </script>
 

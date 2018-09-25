@@ -6,7 +6,7 @@
         :key="index"
         class="navigation__item">
         <a
-          :href="item.url"
+          :href="`/${$store.state.locale}/#${item.sectionId}`"
           :title="item.name"
           class="navigation__link no-underline">
           {{ item.name }}
@@ -18,13 +18,15 @@
 
 <script>
   export default {
-    data: () => ({
-      menuItems: [
-        { name: 'Giới thiệu', url: '/#gioi-thieu' },
-        { name: 'Dịch vụ', url: '/#dich-vu' },
-        { name: 'Tổng quan', url: '/#tong-quan' },
-      ]
-    })
+    computed: {
+      menuItems() {
+        return [
+          { name: this.$t('navigation.about.label'), sectionId: this.$t('navigation.about.section_id') },
+          { name: this.$t('navigation.services.label'), sectionId: this.$t('navigation.services.section_id') },
+          { name: this.$t('navigation.summary.label'), sectionId: this.$t('navigation.summary.section_id') },
+        ]
+      }
+    }
   }
 </script>
 

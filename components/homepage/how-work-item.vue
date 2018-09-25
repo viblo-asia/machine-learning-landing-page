@@ -15,7 +15,11 @@
           </div>
 
           <nuxt-link :to="trialUrl" class="flex flex--start my-3 link">
-            <el-button type="primary" class="how-work-item__btn" round>Dùng thử ngay!</el-button>
+            <el-button
+              type="primary"
+              class="how-work-item__btn" round>
+              {{ $t('label.try_it_now') }}
+            </el-button>
           </nuxt-link>
         </div>
       </el-col>

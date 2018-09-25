@@ -7,7 +7,7 @@
     <el-row class="my-2">
       <el-col>
         <el-form :model="form">
-          <el-form-item label="Nhập source code của bạn cần kiểm tra">
+          <el-form-item :label="$t('form.labels.enter_your_code')">
             <el-input
               v-model="form.code"
               :autosize="{ minRows: 6 }"
@@ -31,7 +31,7 @@
     <el-row v-if="result" type="flex" justify="center">
       <el-col :span="12">
         <el-alert :closable="false" type="info" title="">
-          <span class="mr-1">Ngôn ngữ lập trình:</span>
+          <span class="mr-1">{{ $t('form.labels.detected_programming_language') }}}:</span>
           <strong>{{ result }}</strong>
         </el-alert>
       </el-col>
@@ -41,8 +41,8 @@
 
 <script>
   import { detectCode } from '~/api'
-  import { pageSEO } from '~/utils/seo'
-  import { langCodeDetection as service } from '~/contents/service-items'
+  import { servicePage } from '~/utils/page'
+  import { getServiceItem } from '~/contents/services'
   import * as formDefault from '~/contents/form-default/programming-language-detection'
   import SectionHeader from '~/components/shared/section-header.vue'
 
@@ -51,29 +51,27 @@
       SectionHeader
     },
 
-    data: () => ({
-      service,
-      processing: false,
-      result: null,
-      form: Object.assign({}, formDefault)
-    }),
+    data() {
+      return {
+        service: getServiceItem(this, 'programming_language_detection'),
+        processing: false,
+        result: null,
+        form: Object.assign({}, formDefault)
+      }
+    },
 
     methods: {
       onSubmit() {
         this.processing = true
         return detectCode(this.form)
           .then(({ data }) => this.result = data.data.programming_language)
-          .catch(_ => this.$message.error('Something went wrong.'))
+          .catch(_ => this.$message.error(this.$t('errors.something_wrong')))
           .finally(() => this.processing = false)
       }
     },
 
-    head: () => ({
-      title: `${service.name} service - Viblo Machine Learning`,
-      meta: pageSEO({
-        title: `${service.name} service - Viblo Machine Learning`,
-        description: service.description
-      }),
-    })
+    head() {
+      return servicePage(this.service)
+    }
   }
 </script>

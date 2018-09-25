@@ -42,9 +42,14 @@ module.exports = {
     ],
   ],
 
+  router: {
+    middleware: 'i18n'
+  },
+
   plugins: [
     '~/plugins/element-ui',
     '~/plugins/font-awesome',
+    '~/plugins/i18n',
   ],
 
   build: {

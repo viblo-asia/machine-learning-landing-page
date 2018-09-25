@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/" class="logo-wrap no-underline">
+  <nuxt-link :to="`/${$store.state.locale}`" class="logo-wrap no-underline">
     <img
       src="https://viblo.asia/logo_full.svg"
       alt="Viblo machine learning service"
@@ -27,6 +27,17 @@
       font-weight: 700;
       margin-left: 0.625rem;
       text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 320px) {
+      &__image {
+        width: 60px;
+      }
+    }
+    @media screen and (max-width: 888px) {
+      &__name {
+        font-size: 0.735rem;
+      }
     }
   }
 </style>

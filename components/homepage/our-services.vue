@@ -1,7 +1,9 @@
 <template>
-  <section class="our-services py-sm-and-up-5 py-xs-only-2 px-sm-and-down-1" id="dich-vu">
-    <section-header title="Our services" :uppercase="true">
-      Các dịch vụ chúng tôi đã và đang phát triển.
+  <section
+    :id="$t('navigation.services.section_id')"
+    class="our-services py-sm-and-up-5 py-xs-only-2 px-sm-and-down-1">
+    <section-header :title="$t('home.our_services.title')" :uppercase="true">
+      {{ $t('home.our_services.description') }}
     </section-header>
 
     <el-row :gutter="20" class="mt-3">
@@ -15,16 +17,16 @@
 
       <el-col :sm="12" :md="8">
         <service-item
-          name="More services later..."
-          description="Ghé thăm thường xuyên để trải nghiệm những dịch vụ mới"
-          image="/images/our-services/6.png"/>
+          :name="$t('services.more.name')"
+          :description="$t('services.more.description')"
+          image="/images/our-services/more.png"/>
       </el-col>
     </el-row>
   </section>
 </template>
 
 <script>
-  import services from '~/contents/service-items'
+  import { getServices } from '~/contents/services'
   import SectionHeader from '~/components/shared/section-header.vue'
   import ServiceItem from './service-item.vue'
 
@@ -34,8 +36,10 @@
       ServiceItem
     },
 
-    data: () => ({
-      services
-    })
+    data () {
+      return {
+        services: getServices(this)
+      }
+    }
   }
 </script>

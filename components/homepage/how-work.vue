@@ -1,14 +1,13 @@
 <template>
-  <section class="how-work py-sm-and-up-4" id="tong-quan">
+  <section :id="$t('navigation.summary.section_id')" class="how-work py-sm-and-up-4">
     <div class="how-work__header py-3">
       <section-header :uppercase="true">
         <template slot="title">
-          <div class="how-work__header-title">How our services work?</div>
+          <div class="how-work__header-title">{{ $t('home.how_work.title') }}</div>
         </template>
-        <p class="how-work__header-description mt-xs-only-2">
-          Bạn tò mò về cách thức hoạt động của dịch vụ trên? <br>
-          Dưới đây là ý tưởng chung của các dịch vụ đó!
-        </p>
+        <p
+          v-html="$t('home.how_work.description')"
+          class="how-work__header-description mt-xs-only-2"/>
       </section-header>
     </div>
 
@@ -17,7 +16,7 @@
         v-for="(service, index) in services"
         :key="index"
         :title="service.name"
-        :image="service.image"
+        :image="`/images/how-work/${service.key}.png`"
         :trial-url="service.url"
         :reverse="!!(index % 2)">
         <template slot="description">
@@ -31,7 +30,7 @@
 </template>
 
 <script>
-  import services from '~/contents/service-items-detail'
+  import { getServices } from '~/contents/services'
   import SectionHeader from '~/components/shared/section-header.vue'
   import HowWorkItem from '~/components/homepage/how-work-item.vue'
 
@@ -41,9 +40,11 @@
       HowWorkItem
     },
 
-    data: () => ({
-      services
-    })
+    data() {
+      return {
+        services: getServices(this)
+      }
+    }
   }
 </script>
 

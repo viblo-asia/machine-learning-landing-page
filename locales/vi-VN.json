@@ -1,0 +1,107 @@
+{
+  "home": {
+    "introduction": {
+      "title": "About us",
+      "description": "Blog kỹ thuật dành cho các lập trình viên Việt Nam",
+      "machine_learning": "Machine learning",
+      "natural_language_processing": "Natural language processing",
+      "deep_learning": "Deep learning",
+      "contents": "Chúng tôi ứng dụng các kỹ thuật trong <strong>Machine Learning</strong>, <strong>Deep Learning</strong> và đặc biệt là <strong>Natural Language Processing</strong> để xây dựng các dịch vụ hiện đang được sử dụng bởi Viblo (Một blog kĩ thuật dành cho các lập trình viên Việt Nam). Tất nhiên, chúng tôi không muốn giới hạn các dịch vụ này trong khuôn khổ của Viblo. Trong tương lai, chúng tôi sẽ tách các dịch vụ này thành các ứng dụng độc lập và bạn hoàn toàn có thể sử dụng chúng để xây dựng những ý tưởng của riêng mình."
+    },
+
+    "our_services": {
+      "title": "Our services",
+      "description": "Các dịch vụ chúng tôi đã và đang phát triển"
+    },
+
+    "how_work": {
+      "title": "How do our services work?",
+      "description": "Bạn tò mò về cách thức hoạt động của dịch vụ trên?<br>Dưới đây là ý tưởng chung của các dịch vụ đó!"
+    }
+  },
+
+  "form": {
+    "labels": {
+      "enter_your_code": "Nhập đoạn code mà bạn muốn kiểm tra",
+      "enter_your_document": "Nhập nội dung bài viết của bạn",
+      "enter_your_tag": "Nhập tên tag mà bạn muốn so sánh để tìm ra những tag tương tự",
+      "enable_markdown_syntax": "Nội dung viết theo cú pháp Markdown",
+
+      "suggestions": "Danh sách gợi ý",
+      "total_posts": "Tổng số bài viết",
+      "tag_same_words": "Tags cùng tên",
+      "tag_same_meaning": "Tags đồng nghĩa",
+      "tag_name": "Tên tag",
+
+      "language": "Ngôn ngữ",
+      "lang_code": "Lang code",
+      "exact": "Độ chính xác",
+
+      "detected_programming_language": "Ngôn ngữ lập trình được xác định"
+    },
+    "messages": {
+      "is_spam": "Bài viết của bạn bị đánh giá là <strong>SPAM</strong>.",
+      "is_not_spam": "Bài viết của bạn thuộc phân loại: <strong>{type}</strong>.",
+      "no_data": "Không có dữ liệu"
+    }
+  },
+
+  "errors": {
+    "something_wrong": "Đã có lỗi xảy ra."
+  },
+
+  "services": {
+    "programming_language_detection": {
+      "name": "Programming language detection",
+      "description": "Xác định ngôn ngữ lập trình",
+      "contents": "<p>Hệ thống giúp xác định những phần chứa mã nguồn (code) trong bài viết được viết theo ngôn ngữ lập trình nào. Từ đó dễ dàng hơn cho hệ thống để xử lý, highlight code trong bài viết...</p>"
+    },
+    "spam_detection": {
+      "name": "Spam detection",
+      "description": "Nhận diện bài viết thuộc dạng spam",
+      "contents": "<p>Hệ thống trí tuệ nhân tạo được training trên gần <strong>15,000 bài viết</strong> về công nghệ hiện có trên Viblo cũng như các bài báo, quảng cáo khác giúp xác định được đâu là bài đăng có nội dung không liên quan tới lĩnh vực công nghệ với độ chính xác rất cao <strong>(99,7%)</strong> trong khoảng thời gian không đáng kể (ms).</p>"
+    },
+    "tag_compare": {
+      "name": "Tag compare",
+      "description": "Tìm tag tương tự về cả từ lẫn ngữ nghĩa",
+      "contents": "<p>Training mô hình trên các tag có sẵn hiện có trên Viblo, đồng thời huấn luyện với các bài viết chứa các tag này. Mô hình giúp lấy ra những tag gần nhất (kể cả về mặt từ ngữ - words, lẫn về mặt ngữ nghĩa - meaning).</p>"
+    },
+    "auto_tagging": {
+      "name": "Auto tagging",
+      "description": "Tự động đánh tag cho văn bản",
+      "contents": "<p>Mô hình được huấn luyện trên các bài viết có nội dung về công nghê, chứa nhiều từ vựng và từ khóa về các chủ đề công nghệ hiện nay. Từ đó có thể đưa ra được những tag hợp lý dựa trên nội dung bài viết trong thời gian không đáng kể.</p>"
+    },
+    "language_detection": {
+      "name": "Language detection",
+      "description": "Xác định ngôn ngữ chính của bài viết",
+      "contents": "<p>Sử dụng <strong>giải thuật Đồ thị N-Gram (Graph-based N-Gram) và các kĩ thuật xử lý dữ liệu dạng kí tự Unicode</strong> để đưa ra giải thuật giúp định nghĩa ngôn ngữ xuất hiện trong văn bản và có khả năng huấn luyện thêm các ngôn ngữ khác nếu có một tập dữ liệu đủ tốt.</p><p>Ứng dụng trong việc hỗ trợ cho người dùng lựa chọn ngôn ngữ cho bài viết của mình, trợ giúp đắc lực cho việc tìm kiếm bằng Elasticsearch được chính xác hơn.</p>"
+    },
+    "more": {
+      "name": "More services later...",
+      "description": "Ghé thăm thường xuyên để trải nghiệm những dịch vụ mới"
+    }
+  },
+
+  "footer": {
+    "copyright": "&copy; 2018 Viblo. All rights reserved."
+  },
+
+  "navigation": {
+    "about": {
+      "label": "Giới thiệu",
+      "section_id": "gioi-thieu"
+    },
+    "services": {
+      "label": "Dịch vụ",
+      "section_id": "dich-vu"
+    },
+    "summary": {
+      "label": "Tổng quan",
+      "section_id": "tong-quan"
+    }
+  },
+
+  "label": {
+    "try_it_now": "Dùng thử ngay!"
+  }
+}
