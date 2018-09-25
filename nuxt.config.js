@@ -54,8 +54,32 @@ module.exports = {
   ],
 
   build: {
-    /* Run ESLint on save */
+    analyze: {
+      analyzerMode: 'static',
+      reportFilename: 'report.html',
+      defaultSizes: 'parsed',
+      openAnalyzer: false,
+      generateStatsFile: true,
+      statsFilename: 'stats.json',
+      statsOptions: {
+        hash: true,
+        version: true,
+        timings: true,
+        assets: true,
+        chunks: true,
+        modules: true,
+        reasons: true,
+        children: true,
+        source: true,
+        errors: true,
+        errorDetails: true,
+        warnings: true,
+        publicPath: true,
+      },
+    },
+
     extend (config, { isDev, isClient }) {
+      /* Run ESLint on save */
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
