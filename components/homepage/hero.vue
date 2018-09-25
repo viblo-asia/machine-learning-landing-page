@@ -1,6 +1,11 @@
 <template>
   <div class="hero">
-    <img src="/images/hero/slider.png" alt="Viblo's machine learning banner"/>
+    <img
+      v-progressive-loading
+      src="/images/hero/slider-50x.png"
+      data-original-src="/images/hero/slider.png"
+      alt="Viblo's machine learning banner"
+      class="hero__image progressive-loading"/>
 
     <particles-js particles-id="hero-section"/>
   </div>
@@ -17,8 +22,8 @@
 </script>
 
 <style lang="css">
-  .hero img {
-    max-width: 100%;
+  .hero .hero__image {
+    width: 100%;
     height: auto;
   }
 </style>

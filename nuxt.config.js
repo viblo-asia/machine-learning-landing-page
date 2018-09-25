@@ -47,6 +47,7 @@ module.exports = {
   },
 
   plugins: [
+    '~/plugins/directives',
     '~/plugins/element-ui',
     '~/plugins/font-awesome',
     '~/plugins/i18n',
