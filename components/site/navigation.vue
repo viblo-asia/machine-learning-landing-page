@@ -6,8 +6,10 @@
         :key="index"
         class="navigation__item">
         <a
+          v-scroll-on-click.prevent
           :href="url(`/#${item.sectionId}`, $store.state.locale)"
           :title="item.name"
+          :data-scroll-target="`#${item.sectionId}`"
           class="navigation__link no-underline">
           {{ item.name }}
         </a>
