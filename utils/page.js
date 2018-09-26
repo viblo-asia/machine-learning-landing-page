@@ -7,3 +7,14 @@ export const servicePage = (service) => ({
     description: service.description,
   }),
 })
+
+export const url = (newPath, newLocale) => {
+  if (typeof newPath === 'string') {
+    return newPath.startsWith(`/${newLocale}/`) ? newPath : `/${newLocale}${newPath}`
+  }
+
+  const { path, locale } = newPath
+  const next = path.replace(locale, newLocale)
+
+  return url(next, newLocale)
+}

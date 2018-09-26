@@ -6,7 +6,7 @@
         :key="index"
         class="navigation__item">
         <a
-          :href="`/${$store.state.locale}/#${item.sectionId}`"
+          :href="url(`/#${item.sectionId}`, $store.state.locale)"
           :title="item.name"
           class="navigation__link no-underline">
           {{ item.name }}
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import { url } from '~/utils/page'
+
   export default {
     computed: {
       menuItems() {
@@ -26,6 +28,10 @@
           { name: this.$t('navigation.summary.label'), sectionId: this.$t('navigation.summary.section_id') },
         ]
       }
+    },
+
+    methods: {
+      url
     }
   }
 </script>

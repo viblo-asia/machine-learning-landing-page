@@ -1,13 +1,28 @@
-<template>
-  <nuxt-link :to="`/${$store.state.locale}`" class="logo-wrap no-underline">
-    <img
-      src="https://viblo.asia/logo_full.svg"
-      alt="Viblo machine learning service"
-      class="logo-wrap__image"/>
+<script>
+  import { url } from '~/utils/page'
 
-    <span class="logo-wrap__name">Machine learning</span>
-  </nuxt-link>
-</template>
+  export default {
+    functional: true,
+
+    props: {
+      locale: {
+        type: String,
+        required: true
+      }
+    },
+
+    render: (h, { props: { locale } }) => (
+      <nuxt-link to={url('/', locale)} class="logo-wrap no-underline">
+        <img
+          src="https://viblo.asia/logo_full.svg"
+          alt="Viblo machine learning service"
+          class="logo-wrap__image"/>
+
+        <span class="logo-wrap__name">Machine learning</span>
+      </nuxt-link>
+    )
+  }
+</script>
 
 <style lang="scss">
   @import '~assets/sass/variables/colors';

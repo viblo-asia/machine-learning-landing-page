@@ -2,7 +2,7 @@
   <div class="header py-05">
     <el-row type="flex" justify="space-between" align="middle">
       <el-col :xs="14" :sm="7">
-        <logo-wrap/>
+        <logo-wrap :locale="$store.state.locale"/>
       </el-col>
 
       <el-col :xs="10" :sm="17" class="flex flex--align-middle flex--justify-end">

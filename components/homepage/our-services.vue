@@ -12,7 +12,11 @@
         :key="index"
         :sm="12"
         :md="8">
-        <service-item v-bind="service"/>
+        <service-item
+          :name="service.name"
+          :description="service.description"
+          :image="service.image"
+          :url="url(service.url, $store.state.locale)"/>
       </el-col>
 
       <el-col :sm="12" :md="8">
@@ -26,6 +30,7 @@
 </template>
 
 <script>
+  import { url } from '~/utils/page'
   import { getServices } from '~/contents/services'
   import SectionHeader from '~/components/shared/section-header.vue'
   import ServiceItem from './service-item.vue'
@@ -40,6 +45,10 @@
       return {
         services: getServices(this)
       }
+    },
+
+    methods: {
+      url
     }
   }
 </script>

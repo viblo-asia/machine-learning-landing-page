@@ -15,6 +15,8 @@
 </template>
 
 <script>
+  import { url } from '~/utils/page'
+
   const locales = [
     { code: 'en-US', name: 'English' },
     { code: 'vi-VN', name: 'Tiếng Việt' },
@@ -34,9 +36,8 @@
       changeLanguage(newLocale) {
         if (newLocale === this.$store.state.locale) return
 
-        const currentLocale = this.$store.state.locale
-        const nextPath = this.$route.path.replace(currentLocale, newLocale)
-        const page = nextPath.startsWith(`/${newLocale}`) ? nextPath : `/${newLocale}${nextPath}`
+        const currentRoute = { path: this.$route.path, locale: this.$store.state.locale }
+        const page = url(currentRoute, newLocale)
 
         this.$router.push(page)
       }

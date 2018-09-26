@@ -12,7 +12,7 @@ export const getServiceItem = (app, item) => ({
   description: app.$t(`services.${item}.description`),
   contents: app.$t(`services.${item}.contents`),
   image: `/images/our-services/${item}.png`,
-  url: item.replace(/\_/g, '-'),
+  url: `/${item.replace(/\_/g, '-')}`,
 })
 
 export const getServices = (app) => services.map((item) => getServiceItem(app, item))
