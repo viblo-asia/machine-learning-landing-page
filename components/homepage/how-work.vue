@@ -17,7 +17,7 @@
         :key="index"
         :title="service.name"
         :image="`/images/how-work/${service.key}.png`"
-        :trial-url="url(service.url, $store.state.locale)"
+        :trial-url="serviceURL(service)"
         :reverse="!!(index % 2)">
         <template slot="description">
           {{ service.description }}
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import { url } from '~/utils/page'
+  import { serviceURL } from '~/utils/page'
   import { getServices } from '~/contents/services'
   import SectionHeader from '~/components/shared/section-header.vue'
   import HowWorkItem from '~/components/homepage/how-work-item.vue'
@@ -48,7 +48,11 @@
     },
 
     methods: {
-      url
+      serviceURL(service) {
+        return service.trialEnabled
+          ? serviceURL(service.key, this.$store.state.locale)
+          : undefined
+      }
     }
   }
 </script>

@@ -31,7 +31,7 @@
     <el-row v-if="result" type="flex" justify="center">
       <el-col :span="12">
         <el-alert :closable="false" type="info" title="">
-          <span class="mr-1">{{ $t('form.labels.detected_programming_language') }}}:</span>
+          <span class="mr-1">{{ $t('form.labels.detected_programming_language') }}:</span>
           <strong>{{ result }}</strong>
         </el-alert>
       </el-col>

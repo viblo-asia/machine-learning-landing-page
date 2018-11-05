@@ -18,3 +18,10 @@ export const url = (newPath, newLocale) => {
 
   return url(next, newLocale)
 }
+
+export const serviceURL = (key, locale) => {
+  const path = `/${key.replace(/\_/g, '-')}`
+  const pathByLocale = url(path, locale)
+
+  return pathByLocale
+}

@@ -14,7 +14,7 @@
             <slot/>
           </div>
 
-          <nuxt-link :to="trialUrl" class="flex flex--start my-3 link">
+          <nuxt-link v-if="trialUrl" :to="trialUrl" class="flex flex--start my-3 link">
             <el-button
               type="primary"
               class="how-work-item__btn" round>

@@ -76,6 +76,16 @@
       "description": "Xác định ngôn ngữ chính của bài viết",
       "contents": "<p>Sử dụng <strong>giải thuật Đồ thị N-Gram (Graph-based N-Gram) và các kĩ thuật xử lý dữ liệu dạng kí tự Unicode</strong> để đưa ra giải thuật giúp định nghĩa ngôn ngữ xuất hiện trong văn bản và có khả năng huấn luyện thêm các ngôn ngữ khác nếu có một tập dữ liệu đủ tốt.</p><p>Ứng dụng trong việc hỗ trợ cho người dùng lựa chọn ngôn ngữ cho bài viết của mình, trợ giúp đắc lực cho việc tìm kiếm bằng Elasticsearch được chính xác hơn.</p>"
     },
+    "recommendation_system": {
+      "name": "Recommendation system",
+      "description": "Tự động gợi ý bài viết có liên quan cho người dùng",
+      "contents": "<p>Với khối lượng thông tin/ kiến thức khổng lồ <strong>(20000 bài viết thuộc hơn 100 chủ đề hiện nay và vẫn còn đang liên tục được gia tăng)</strong> chúng tôi rất để ý tới việc làm sao có thể đưa cho bạn đọc được những bài viết mà họ thực sự quan tâm. Dựa trên số liệu về các bài post mà người dùng đã đọc và nhiều thông tin khác, chúng tôi đã thiết kế một hệ thống khuyến nghị để phục vụ cho nhu cầu vô cùng cần thiết này.</p>"
+    },
+    "plagiarism_detection": {
+      "name": "Plagiarism detection",
+      "description": "Phát hiện đạo văn trong các bài post",
+      "contents": "<p>Vấn đề đạo văn hiện nay đang trở thành một vấn đề nóng của xã hội, đặc biệt khi các công trình nghiên cứu, các bài viết/bài chia sẻ có thể dễ dàng được tiếp cận. Mong muốn tạo ra một trang web mà mỗi bài viết đều thể hiện được giá trị riêng của tác giả, đem lại được những kiến thức có ích, không trùng lặp cho người xem, chúng tôi giới thiệu hệ thống đạo văn. Với việc xem xét <strong>trên hàng trăm trang web, diễn đàn về công nghê</strong>, hệ thống sẽ phát hiện và chỉ ra việc đạo văn một cách cụ thể và dễ dàng.</p>"
+    },
     "more": {
       "name": "More services later...",
       "description": "Ghé thăm thường xuyên để trải nghiệm những dịch vụ mới"
