@@ -25,6 +25,8 @@ import DropdownItem from 'element-ui/lib/dropdown-item'
 import Table from 'element-ui/lib/table'
 import TableColumn from 'element-ui/lib/table-column'
 
+import Dialog from 'element-ui/lib/dialog'
+
 import Message from 'element-ui/lib/message'
 import Alert from 'element-ui/lib/alert'
 
@@ -52,6 +54,8 @@ export default () => {
 
   Vue.component('el-table', Table)
   Vue.component('el-table-column', TableColumn)
+
+  Vue.component('el-dialog', Dialog)
 
   Vue.component('el-alert', Alert)
   Vue.prototype.$message = Message

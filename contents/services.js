@@ -11,7 +11,7 @@ const services = [
 export const getServiceItem = (app, item) => {
   return {
     key: item,
-    trialEnabled: item !== 'recommendation_system' && item !== 'plagiarism_detection',
+    trialEnabled: item !== 'recommendation_system',
     name: app.$t(`services.${item}.name`),
     description: app.$t(`services.${item}.description`),
     contents: app.$t(`services.${item}.contents`),
