@@ -29,13 +29,19 @@
       </section-header>
 
       <el-col>
-        <div v-if="result">
+        <div v-if="result && result.length">
           <plagiarism-result :result="result || []"/>
 
           <btn-try-again @click="result = null"/>
         </div>
 
-        <el-alert v-else :closable="false" type="warning" title show-icon>
+        <el-alert
+          v-else
+          :closable="false"
+          type="warning"
+          class="mt-2"
+          title
+          show-icon>
           Your document is not plagiarism.
         </el-alert>
       </el-col>
