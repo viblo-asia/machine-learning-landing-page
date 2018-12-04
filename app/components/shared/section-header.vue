@@ -7,14 +7,21 @@
       [`section-header--align-${align}`]: true,
     }">
     <div
-      class="section-header__title"
-      :class="{ [`section-header__title--${type}`]: !!type, [`section-header__title--${size}`]: !!size }">
+      :class="{
+        'section-header__title': true,
+        [`section-header__title--${type}`]: !!type,
+        [`section-header__title--${size}`]: !!size
+      }">
       <slot name="title">
         <h4 class="my-1">{{ title }}</h4>
       </slot>
     </div>
 
-    <div class="section-header__description">
+    <div
+      :class="{
+        'section-header__description': true,
+        [`section-header__description--${size}`]: !!size
+      }">
       <slot>
         <p>{{ description }}</p>
       </slot>
@@ -26,6 +33,8 @@
 
 <script>
   export default {
+    name: 'section-header',
+
     props: {
       title: String,
       description: String,
@@ -58,6 +67,9 @@
       font-size: 3rem;
       font-weight: $--fw-section-header--normal;
       text-transform: capitalize;
+      &--small {
+        font-size: 2.2rem;
+      }
       @media screen and (max-width: 768px) {
         font-size: 2.2rem;
       }
@@ -65,6 +77,9 @@
 
     &__description {
       font-size: 1.2rem;
+      &--small {
+        font-size: 1rem;
+      }
       @media screen and (max-width: 768px) {
         font-size: 1rem;
       }

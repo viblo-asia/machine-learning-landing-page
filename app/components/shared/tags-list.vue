@@ -1,7 +1,9 @@
 <template>
   <el-alert v-if="isEmpty" type="info" title="">{{ $t('form.messages.no_data') }}</el-alert>
-  <el-table v-else :data="tags">
+  <el-table v-else :data="tags" :max-height="360">
+    <el-table-column type="index" label="#"/>
     <el-table-column prop="tag" :label="$t('form.labels.tag_name')"/>
+    <el-table-column prop="slug" label="Slug"/>
     <slot/>
     <el-table-column prop="slug" label="Link" width="100" align="center">
       <template slot-scope="{ row }">

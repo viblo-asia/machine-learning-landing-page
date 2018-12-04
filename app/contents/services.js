@@ -1,3 +1,5 @@
+import _map from 'lodash.map'
+
 const services = [
   'programming_language_detection',
   'spam_detection',
@@ -18,6 +20,6 @@ export const getServiceItem = (app, item) => {
   }
 }
 
-export const getServices = (app) => services.map((item) => getServiceItem(app, item))
+export const getServices = (app) => _map(services, (item) => getServiceItem(app, item))
 
 export default services

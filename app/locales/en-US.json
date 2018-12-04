@@ -26,6 +26,7 @@
       "enter_your_document": "Please enter your document",
       "enter_your_tag": "Enter your tag's name which you want to find the same tags",
       "enable_markdown_syntax": "The document is writen in Markdown syntax",
+      "try_again": "Try again",
 
       "suggestions": "Suggestions",
       "total_posts": "Total posts",
@@ -36,6 +37,7 @@
       "language": "Language",
       "lang_code": "Lang code",
       "exact": "Accuracy",
+      "result": "Result",
 
       "detected_programming_language": "The detected programming language"
     },

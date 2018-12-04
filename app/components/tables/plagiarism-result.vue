@@ -2,12 +2,9 @@
   <div>
     <el-table :data="result">
       <el-table-column type="index" width="50"/>
-      <el-table-column
-        :formatter="(_, __, cellValue) => Math.round(parseFloat(cellValue) * 100 * 1000)/1000"
-        prop="similarity_point"
-        label="Matched (%)"
-        align="right"
-        width="120"/>
+      <el-table-column label="Matched (%)" align="right" width="120">
+        <template slot-scope="data">{{ data.row.similarity_point | percentFormat }}</template>
+      </el-table-column>
       <el-table-column
         :formatter="(_, __, cellValue) => cellValue.length"
         prop="similar_sentences"
@@ -19,9 +16,7 @@
         label="URL"
         show-overflow-tooltip>
         <template slot-scope="data">
-          <a class="link" :href="data.row.url" target="_blank">
-            {{ data.row.url }}
-          </a>
+          <a class="link" :href="data.row.url" target="_blank">{{ data.row.url }}</a>
         </template>
       </el-table-column>
       <el-table-column

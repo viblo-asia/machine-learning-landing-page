@@ -1,51 +1,46 @@
 <template>
-  <div class="viblo-container">
-    <section-header :underline="true" :title="service.name">
-      {{ service.description }}
-    </section-header>
+  <demo-service-page
+    :service="service"
+    :show-form="!result"
+    :processing="processing"
+    result-class>
+    <el-form slot="form" :model="form">
+      <el-form-item :label="$t('form.labels.enter_your_document')">
+        <el-input
+          v-model="form.document"
+          :autosize="{ minRows: 6 }"
+          type="textarea"/>
+      </el-form-item>
 
-    <el-row v-if="!result" class="my-2">
-      <el-col>
-        <el-form :model="form">
-          <el-form-item :label="$t('form.labels.enter_your_document')">
-            <el-input
-              v-model="form.document"
-              :autosize="{ minRows: 6 }"
-              type="textarea"/>
-          </el-form-item>
+      <el-form-item class="flex flex--center">
+        <el-button
+          :disabled="!form.document"
+          :loading="processing"
+          type="primary"
+          @click="submit(form)">
+          Submit
+        </el-button>
+      </el-form-item>
+    </el-form>
 
-          <el-form-item class="flex flex--center">
-            <el-button
-              :disabled="!form.document"
-              :loading="processing"
-              type="primary"
-              @click="submit(form)">
-              Submit
-            </el-button>
-          </el-form-item>
-        </el-form>
-      </el-col>
-    </el-row>
-
-    <el-row v-else-if="!processing" id="result" class="mb-3">
-      <section-header :underline="false" size="small" title="Result"/>
+    <el-row slot="result">
+      <section-header :underline="false" size="small" title="Matched posts">
+        The posts are matched with your document.
+      </section-header>
 
       <el-col>
-        <div v-if="result.length">
-          <plagiarism-result :result="result"/>
-          <div class="flex flex--justify-center">
-            <el-button type="primary" class="mt-2" @click="result = null">
-              Click to try another document
-            </el-button>
-          </div>
+        <div v-if="result">
+          <plagiarism-result :result="result || []"/>
+
+          <btn-try-again @click="result = null"/>
         </div>
 
-        <el-alert v-else :closable="false" type="warning" title>
+        <el-alert v-else :closable="false" type="warning" title show-icon>
           Your document is not plagiarism.
         </el-alert>
       </el-col>
     </el-row>
-  </div>
+  </demo-service-page>
 </template>
 
 <script>

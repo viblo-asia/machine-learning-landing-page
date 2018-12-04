@@ -1,8 +1,11 @@
 require('dotenv').config()
 
-const { defaultSEOData, pageSEO, metaTag } = require('esm')(module)('./utils/seo')
+const { resolve } = require('path')
+const { defaultSEOData, pageSEO, metaTag } = require('esm')(module)('./app/utils/seo')
 
 module.exports = {
+  srcDir: resolve(__dirname, 'app'),
+
   dev: process.env.NODE_ENV !== 'production',
 
   // Base head tag for SEO on page
@@ -47,7 +50,9 @@ module.exports = {
   },
 
   plugins: [
+    '~/plugins/components',
     '~/plugins/directives',
+    '~/plugins/filters',
     '~/plugins/element-ui',
     '~/plugins/font-awesome',
     '~/plugins/i18n',

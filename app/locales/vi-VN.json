@@ -26,6 +26,7 @@
       "enter_your_document": "Nhập nội dung bài viết của bạn",
       "enter_your_tag": "Nhập tên tag mà bạn muốn so sánh để tìm ra những tag tương tự",
       "enable_markdown_syntax": "Nội dung viết theo cú pháp Markdown",
+      "try_again": "Thử lại",
 
       "suggestions": "Danh sách gợi ý",
       "total_posts": "Tổng số bài viết",
@@ -36,6 +37,7 @@
       "language": "Ngôn ngữ",
       "lang_code": "Lang code",
       "exact": "Độ chính xác",
+      "result": "Kết quả",
 
       "detected_programming_language": "Ngôn ngữ lập trình được xác định"
     },

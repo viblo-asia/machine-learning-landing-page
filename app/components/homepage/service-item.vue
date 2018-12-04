@@ -7,7 +7,7 @@
     <div class="service-item__content">
       <h3 class="service-item__name mt-0">
         <nuxt-link v-if="url" :to="url" class="link link--plain">{{ name }}</nuxt-link>
-        <a v-else href="javascript:void(0);" class="link link--plain">{{ name }}</a>
+        <a v-else class="link link--plain">{{ name }}</a>
       </h3>
 
       <div class="service-item__description">{{ description }}</div>
