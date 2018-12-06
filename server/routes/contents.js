@@ -12,12 +12,11 @@ const axios = Axios.create({
   }
 })
 
-router.get('/api/p/:hashId', async (req, res) => {
+router.get('/__/p/:hashId', async (req, res) => {
   try {
     const { data } = await axios.get(`/p/${req.params.hashId}`)
     res.json(data)
   } catch (e) {
-    console.log(e)
     res.send(404)
   }
 })

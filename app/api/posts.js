@@ -1,3 +1,3 @@
 import axios from 'axios'
 
-export const fetchPost = (hashId, params) => axios.get(`/api/p/${hashId}`, { params })
+export const fetchPost = (hashId, params) => axios.get(`/__/p/${hashId}`, { params })
