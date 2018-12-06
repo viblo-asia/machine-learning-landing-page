@@ -1,7 +1,8 @@
-**
-!package.json
-!yarn.lock
-!.nuxt
-!app
-!server
-!nuxt.config.js
+.git
+.gitignore
+
+Dockerfile
+.dockerignore
+
+node_modules
+.nuxt
