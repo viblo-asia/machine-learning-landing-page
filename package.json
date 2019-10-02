@@ -27,7 +27,7 @@
     "jump.js": "^1.0.2",
     "lodash.map": "^4.6.0",
     "lodash.transform": "^4.6.0",
-    "nuxt": "^1.4.2",
+    "nuxt": "^2.9.2",
     "particles.js": "^2.0.0",
     "vue-i18n": "^8.1.0"
   },
