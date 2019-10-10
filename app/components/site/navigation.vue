@@ -20,8 +20,19 @@
 
 <script>
   import { url } from '~/utils/page'
+  import jump from 'jump.js'
+  import { findIndex } from 'lodash'
 
   export default {
+    mounted() {
+      const withoutHash = this.$route.hash.replace('#', '');
+      if(this.$route.hash !== "" && findIndex(this.menuItems, ['sectionId', withoutHash]) !== -1) {
+        jump(this.$route.hash, {
+          duration: 0,
+        })
+      }
+    },
+
     computed: {
       menuItems() {
         return [
