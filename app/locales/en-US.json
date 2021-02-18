@@ -44,6 +44,8 @@
     "messages": {
       "is_spam": "Your documnet is detected as <strong>SPAM</strong>.",
       "is_not_spam": "Your document is type of <strong>{type}</strong>. It's not spam.",
+      "is_google_translate": "Your documnet is detected as <strong>Google Translate</strong>.",
+      "is_not_google_translate": "Your document is type of <strong>{type}</strong>. It's not translated using Google Translate or similar tools.",
       "no_data": "Không có dữ liệu"
     }
   },
@@ -87,6 +89,11 @@
       "name": "Plagiarism detection",
       "description": "Detect plagiarism in user's post",
       "contents": "<p>With a huge numbers of published technical posts, we has to cope with the problem of plagiarism. We don't want the content of a published post is a copy-paste work. Because of that, we aim to build a system which is capable of detecting plagiarism automatically. After that, the integrity of a post can be easily verified.</p>"
+    },
+    "google_translate_detection": {
+      "name": "Google Translate detection",
+      "description": "Detect Google Translate posts",
+      "contents": "<p>Many providers offer a free machine translation service (E.g. Google Translate or Bing Translate). While these are awesome and useful tools, they accidentally encourage creating more poorly translated articles which solely depend on machine's result. These articles must be filtered out for a more healthy blogging platform.</p>"
     },
     "more": {
       "name": "More services later...",
