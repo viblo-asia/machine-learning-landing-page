@@ -3,19 +3,15 @@
     <el-form slot="form" :model="form">
       <el-form-item :label="$t('form.labels.enter_your_document')">
         <el-input
-          v-model="form.document"
+          v-model="form.content"
           :autosize="{ minRows: 6 }"
           type="textarea"
           @input="result = null"/>
       </el-form-item>
 
-      <el-form-item :label="$t('form.labels.enable_markdown_syntax')">
-        <el-switch v-model="form.is_markdown"/>
-      </el-form-item>
-
       <el-form-item class="flex flex--center">
         <el-button
-          :disabled="!form.document"
+          :disabled="!form.content"
           :loading="processing"
           type="primary"
           @click="onSubmit">
@@ -44,7 +40,7 @@
   import { detectSpam } from '~/api'
   import { servicePage } from '~/utils/page'
   import { getServiceItem } from '~/contents/services'
-  import * as formDefault from '~/contents/form-default/auto-tagging'
+  import * as formDefault from '~/contents/form-default/spam-detection'
   import SectionHeader from '~/components/shared/section-header.vue'
 
   export default {
@@ -63,7 +59,7 @@
 
     computed: {
       isSpam() {
-        return this.result === 'Non-IT'
+        return this.result === 'Spam'
       }
     },
 
@@ -71,7 +67,7 @@
       onSubmit() {
         this.processing = true
         return detectSpam(this.form)
-          .then(({ data }) => this.result = data.data.document_type)
+          .then(({ data }) => this.result = data.post_content.label_name)
           .catch(_ => this.$message.error(this.$t('errors.something_wrong')))
           .finally(() => this.processing = false)
       }
