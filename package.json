@@ -35,7 +35,7 @@
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
+    "eslint-loader": "2.1.2",
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
