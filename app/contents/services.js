@@ -3,11 +3,9 @@ import _map from 'lodash.map'
 const services = [
   'programming_language_detection',
   'spam_detection',
-  'tag_compare',
   'auto_tagging',
   'language_detection',
   'recommendation_system',
-  'plagiarism_detection',
 ]
 
 export const getServiceItem = (app, item) => {

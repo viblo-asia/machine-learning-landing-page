@@ -63,11 +63,6 @@
       "description": "Nhận diện bài viết thuộc dạng spam",
       "contents": "<p>Hệ thống trí tuệ nhân tạo được training trên gần <strong>15,000 bài viết</strong> về công nghệ hiện có trên Viblo cũng như các bài báo, quảng cáo khác giúp xác định được đâu là bài đăng có nội dung không liên quan tới lĩnh vực công nghệ với độ chính xác rất cao <strong>(99,7%)</strong> trong khoảng thời gian không đáng kể (ms).</p>"
     },
-    "tag_compare": {
-      "name": "Tag compare",
-      "description": "Tìm tag tương tự về cả từ lẫn ngữ nghĩa",
-      "contents": "<p>Training mô hình trên các tag có sẵn hiện có trên Viblo, đồng thời huấn luyện với các bài viết chứa các tag này. Mô hình giúp lấy ra những tag gần nhất (kể cả về mặt từ ngữ - words, lẫn về mặt ngữ nghĩa - meaning).</p>"
-    },
     "auto_tagging": {
       "name": "Auto tagging",
       "description": "Tự động đánh tag cho văn bản",
@@ -82,11 +77,6 @@
       "name": "Recommendation system",
       "description": "Tự động gợi ý bài viết có liên quan cho người dùng",
       "contents": "<p>Với khối lượng thông tin/ kiến thức khổng lồ <strong>(20000 bài viết thuộc hơn 100 chủ đề hiện nay và vẫn còn đang liên tục được gia tăng)</strong> chúng tôi rất để ý tới việc làm sao có thể đưa cho bạn đọc được những bài viết mà họ thực sự quan tâm. Dựa trên số liệu về các bài post mà người dùng đã đọc và nhiều thông tin khác, chúng tôi đã thiết kế một hệ thống khuyến nghị để phục vụ cho nhu cầu vô cùng cần thiết này.</p>"
-    },
-    "plagiarism_detection": {
-      "name": "Plagiarism detection",
-      "description": "Phát hiện đạo văn trong các bài post",
-      "contents": "<p>Vấn đề đạo văn hiện nay đang trở thành một vấn đề nóng của xã hội, đặc biệt khi các công trình nghiên cứu, các bài viết/bài chia sẻ có thể dễ dàng được tiếp cận. Mong muốn tạo ra một trang web mà mỗi bài viết đều thể hiện được giá trị riêng của tác giả, đem lại được những kiến thức có ích, không trùng lặp cho người xem, chúng tôi giới thiệu hệ thống đạo văn. Với việc xem xét <strong>trên hàng trăm trang web, diễn đàn về công nghê</strong>, hệ thống sẽ phát hiện và chỉ ra việc đạo văn một cách cụ thể và dễ dàng.</p>"
     },
     "more": {
       "name": "More services later...",

@@ -63,11 +63,6 @@
       "description": "Identify whether a post is spam or not",
       "contents": "<p>We train the spam detector with about <strong>15000 labeled posts</strong> from Viblo, news, and advertisements as well. The accuracy of our spam detector is reported to be extremely high <strong>(99.7%)</strong> and the processing time is impressively low (ms).</p>"
     },
-    "tag_compare": {
-      "name": "Tag compare",
-      "description": "Find tags which have the same meaning",
-      "contents": "<p>Our service can automatically find tags which have the same meanings. The training data are technical posts from Viblo platforms and their corresponding tags.</p>"
-    },
     "auto_tagging": {
       "name": "Auto tagging",
       "description": "Automatically find relevant tags for a post",
@@ -82,11 +77,6 @@
       "name": "Recommendation system",
       "description": "Automatically recommend relevant posts on Viblo for users",
       "contents": "<p>Up to now, there are many technical posts on Viblo <strong>(over 20K posts of about 100 different subjects)</strong>, and the number of posts tends to increase very rapidly. As such, users often encounter the problem of information overload; users usually find it difficult to find suitable posts to their need. Therefore, a recommendation system has been built in order to suggest relevant technical posts on Viblo for users based on their interest.</p>"
-    },
-    "plagiarism_detection": {
-      "name": "Plagiarism detection",
-      "description": "Detect plagiarism in user's post",
-      "contents": "<p>With a huge numbers of published technical posts, we has to cope with the problem of plagiarism. We don't want the content of a published post is a copy-paste work. Because of that, we aim to build a system which is capable of detecting plagiarism automatically. After that, the integrity of a post can be easily verified.</p>"
     },
     "more": {
       "name": "More services later...",
