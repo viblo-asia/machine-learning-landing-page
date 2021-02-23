@@ -3,19 +3,15 @@
     <el-form slot="form" :model="form" method="post" @submit.native.prevent="onSubmit">
       <el-form-item :label="$t('form.labels.enter_your_document')">
         <el-input
-          v-model="form.document"
+          v-model="form.content"
           :autosize="{ minRows: 6 }"
           type="textarea"
           @input="result = null"/>
       </el-form-item>
 
-      <el-form-item :label="$t('form.labels.enable_markdown_syntax')">
-        <el-switch v-model="form.is_markdown"/>
-      </el-form-item>
-
       <el-form-item class="flex flex--center">
         <el-button
-          :disabled="!form.document"
+          :disabled="!form.content"
           :loading="processing"
           type="primary"
           @click="onSubmit">
@@ -28,17 +24,12 @@
       <el-row>
         <el-col>
           <section-header :title="$t('form.labels.suggestions')" size="small"/>
-          <tags-list :tags="result ? result.tags_recommend : []">
-            <el-table-column
-              :label="$t('form.labels.total_posts')"
-              prop="number_posts"
-              width="150"
-              align="center"/>
-          </tags-list>
+          <tags-list :tags="result ? result : []"/>
           <btn-try-again @click="result = null"/>
         </el-col>
       </el-row>
     </div>
+
   </demo-service-page>
 </template>
 
@@ -67,7 +58,7 @@
       onSubmit () {
         this.processing = true
         return autoTagging(this.form)
-          .then(({ data }) => this.result = data.data)
+          .then(({ data }) => this.result = data.list_tag_predict)
           .catch(_ => this.$message.error(this.$t('errors.something_wrong')))
           .finally(() => this.processing = false)
       }
