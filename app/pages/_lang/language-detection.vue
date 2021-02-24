@@ -3,19 +3,15 @@
     <el-form slot="form" :model="form" method="post" @submit.native.prevent="onSubmit">
       <el-form-item :label="$t('form.labels.enter_your_document')">
         <el-input
-          v-model="form.document"
+          v-model="form.content"
           :autosize="{ minRows: 6 }"
           type="textarea"
           @input="result = null"/>
       </el-form-item>
 
-      <el-form-item :label="$t('form.labels.enable_markdown_syntax')">
-        <el-switch v-model="form.is_markdown"/>
-      </el-form-item>
-
       <el-form-item class="flex flex--center">
         <el-button
-          :disabled="!form.document"
+          :disabled="!form.content"
           :loading="processing"
           type="primary"
           @click="onSubmit">
@@ -27,14 +23,14 @@
     <div slot="result">
       <section-header :title="$t('form.labels.result')" size="small"/>
 
-      <el-table :data="result ? result.languages : []">
-        <el-table-column type="index" label="#"/>
-        <el-table-column prop="name" :label="$t('form.labels.language')"/>
-        <el-table-column prop="langCode" :label="$t('form.labels.lang_code')"/>
-        <el-table-column prop="distance" :label="$t('form.labels.exact') + ' (%)'">
-          <template slot-scope="data">{{ data.row.distance | percentFormat }}</template>
-        </el-table-column>
-      </el-table>
+      <el-alert
+        :closable="false"
+        type='success'
+        class="language-post flex--justify-center"
+        show-icon
+      >
+        <p v-html="$t('form.messages.language_of_post', { type: result })"/>
+      </el-alert>
 
       <btn-try-again @click="result = null"/>
     </div>
@@ -71,10 +67,7 @@
       onSubmit () {
         this.processing = true
         return detectLanguage(this.form)
-          .then(({ data }) => {
-            const languages = normalizeResult(data.data.result)
-            this.result = { languages }
-          })
+          .then(({ data }) => this.result = data.language)
           .catch(_ => this.$message.error(this.$t('errors.something_wrong')))
           .finally(() => this.processing = false)
       }
@@ -85,3 +78,10 @@
     }
   }
 </script>
+
+<style lang="css">
+  .language-post {
+    max-width: 50%;
+    margin-left: 25%;
+  }
+</style>
