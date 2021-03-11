@@ -8,6 +8,7 @@ const services = [
   'language_detection',
   'recommendation_system',
   'plagiarism_detection',
+  'google_translate_detection',
 ]
 
 export const getServiceItem = (app, item) => {

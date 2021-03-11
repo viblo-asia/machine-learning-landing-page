@@ -88,6 +88,11 @@
       "description": "Phát hiện đạo văn trong các bài post",
       "contents": "<p>Vấn đề đạo văn hiện nay đang trở thành một vấn đề nóng của xã hội, đặc biệt khi các công trình nghiên cứu, các bài viết/bài chia sẻ có thể dễ dàng được tiếp cận. Mong muốn tạo ra một trang web mà mỗi bài viết đều thể hiện được giá trị riêng của tác giả, đem lại được những kiến thức có ích, không trùng lặp cho người xem, chúng tôi giới thiệu hệ thống đạo văn. Với việc xem xét <strong>trên hàng trăm trang web, diễn đàn về công nghê</strong>, hệ thống sẽ phát hiện và chỉ ra việc đạo văn một cách cụ thể và dễ dàng.</p>"
     },
+    "google_translate_detection": {
+      "name": "Google Translate detection",
+      "description": "Detect Google Translate posts",
+      "contents": "<p>With a huge numbers of published technical posts, we has to cope with the problem of plagiarism. We don't want the content of a published post is a copy-paste work. Because of that, we aim to build a system which is capable of detecting plagiarism automatically. After that, the integrity of a post can be easily verified.</p>"
+    },
     "more": {
       "name": "More services later...",
       "description": "Ghé thăm thường xuyên để trải nghiệm những dịch vụ mới"
