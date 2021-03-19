@@ -1,19 +1,6 @@
-export const code =
-`
-<?php
-// Get a file into an array.  In this example we'll go through HTTP to get
-// the HTML source of a URL.
-$lines = file('http://www.example.com/');
+export const post_id = 0
 
-// Loop through our array, show HTML source as HTML source; and line numbers too.
-foreach ($lines as $line_num => $line) {
-    echo "Line #<b>{$line_num}</b> : " . htmlspecialchars($line) . "<br />\n";
-}
+export const content =
+"``` \r\nexport default {\r\n  computed: {\r\n     myGetter() {\r\n         return this.$store.getters['myModule\/myGetter'];\r\n     },\r\n     myGetter2() {\r\n         return this.$store.getters['myModule\/myGetter2'];\r\n     }\r\n  },\r\n\r\n  methods: {\r\n    myAction() {\r\n        this.$store.dispatch('myModule\/myAction');\r\n    },\r\n     myAction2() {\r\n        this.$store.dispatch('myModule\/myAction2');\r\n    }\r\n  }\r\n};\r\n```"
 
-// Another example, let's get a web page into a string.  See also file_get_contents().
-$html = implode('', file('http://www.example.com/'));
-
-// Using the optional flags parameter since PHP 5
-$trimmed = file('somefile.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-?>
-`
+export const tag = []

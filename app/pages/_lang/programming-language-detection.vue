@@ -3,7 +3,7 @@
     <el-form slot="form" :model="form">
       <el-form-item :label="$t('form.labels.enter_your_code')">
         <el-input
-          v-model="form.code"
+          v-model="form.content"
           :autosize="{ minRows: 6 }"
           type="textarea"
           @input="result = null"/>
@@ -11,7 +11,7 @@
 
       <el-form-item class="flex flex--center">
         <el-button
-          :disabled="!form.code"
+          :disabled="!form.content"
           :loading="processing"
           type="primary"
           @click="onSubmit">
@@ -23,7 +23,12 @@
     <div slot="result" style="max-width: 40rem">
       <el-alert :closable="false" type="success" title show-icon>
         <span class="mr-1">{{ $t('form.labels.detected_programming_language') }}:</span>
-        <strong>{{ result }}</strong>
+        <strong
+          v-for="(item, index) in result"
+          :key="index"
+        >
+          {{item.language}}
+        </strong>
       </el-alert>
 
       <btn-try-again @click="result = null"/>
@@ -35,7 +40,7 @@
   import { detectCode } from '~/api'
   import { servicePage } from '~/utils/page'
   import { getServiceItem } from '~/contents/services'
-  import * as formDefault from '~/contents/form-default/programming-language-detection'
+import * as formDefault from '~/contents/form-default/programming-language-detection'
 
   export default {
     data() {
@@ -51,7 +56,7 @@
       onSubmit() {
         this.processing = true
         return detectCode(this.form)
-          .then(({ data }) => this.result = data.data.programming_language)
+          .then(({ data }) => this.result = data.code)
           .catch(_ => this.$message.error(this.$t('errors.something_wrong')))
           .finally(() => this.processing = false)
       }
