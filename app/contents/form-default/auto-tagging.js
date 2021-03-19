@@ -1,7 +1,7 @@
 //
-export const is_markdown = true
+export const post_id = 0
 
-export const document =
+export const content =
 `
 ## What is new \cursor\` method in query builder?
 
