@@ -44,7 +44,8 @@
     "messages": {
       "is_spam": "Bài viết của bạn bị đánh giá là <strong>SPAM</strong>.",
       "is_not_spam": "Bài viết của bạn thuộc phân loại: <strong>{type}</strong>.",
-      "no_data": "Không có dữ liệu"
+      "no_data": "Không có dữ liệu",
+      "language_of_post": "Ngôn ngữ chính của bài viết là: <strong>{type}</strong>"
     }
   },
 

@@ -44,7 +44,8 @@
     "messages": {
       "is_spam": "Your documnet is detected as <strong>SPAM</strong>.",
       "is_not_spam": "Your document is type of <strong>{type}</strong>. It's not spam.",
-      "no_data": "Không có dữ liệu"
+      "no_data": "No data",
+      "language_of_post": "The language of the post is <strong>{type}</strong>"
     }
   },
 
